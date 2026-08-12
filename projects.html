@@ -48,6 +48,7 @@
       <button class="filter" data-filter="pcb">pcb design</button>
       <button class="filter" data-filter="firmware">firmware</button>
       <button class="filter" data-filter="rf">rf &amp; sensing</button>
+      <button class="filter" data-filter="software">systems software</button>
     </div>
 
     <div class="grid" id="project-grid">
@@ -101,6 +102,24 @@
           <div class="tags">
             <span class="tag">USB-C PD</span><span class="tag">BMS</span>
             <span class="tag">Buck/Boost</span><span class="tag">Fuel gauge</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ---------- NAND flash simulator ---------- -->
+      <article class="card" data-tags="software firmware">
+        <div class="card-media"><img src="images/nand-blockmap.svg" alt="NAND FTL block map showing valid, stale and free pages"></div>
+        <div class="card-top"><span class="status">Complete</span><span>2026</span></div>
+        <h3><a class="stretch" href="project-nand.html">NAND Flash Simulator &amp; Translation Layer</a></h3>
+        <p>
+          Dependency-free C11 model of NAND at block/page level, plus an FTL with
+          out-of-place updates, greedy garbage collection and wear levelling — so you can
+          watch write amplification climb from 1.00× to 1.30×.
+        </p>
+        <div class="card-foot">
+          <div class="tags">
+            <span class="tag">C11</span><span class="tag">FTL</span>
+            <span class="tag">Garbage collection</span><span class="tag">ASan / UBSan</span>
           </div>
         </div>
       </article>

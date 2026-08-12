@@ -69,6 +69,20 @@ Three PDFs are served from this folder and linked from the site:
 | `resume.pdf` | nav on every page, About sidebar |
 | `csstc-2026-abstract.pdf` | Research page — "Read the abstract" |
 | `room-watchdog-report.pdf` | Room Watchdog project — "Full design report" |
+| `nand-flash-simulator.zip` | NAND project — "Download source" |
+
+## Bug found in the NAND project
+
+Your `Makefile` lists `ftl_main.c` in `FTL_SRCS`, but the file is called `ftlmain.c`.
+Plain `make` builds `nand_sim` then dies with *"No rule to make target 'ftl_main.o'"*.
+One-character fix:
+
+```make
+FTL_SRCS := ftlmain.c nand_flash.c ftl.c
+```
+
+Compiling the three files directly works fine, which is presumably how you've been
+building it. Worth fixing before anyone clones it.
 
 ## Conflicts I resolved — check I picked right
 
