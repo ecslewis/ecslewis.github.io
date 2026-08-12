@@ -49,16 +49,26 @@ automatically, and there's a `<noscript>` fallback on every page.
 
 ## Still to fill in
 
-Content comes from your deck and resume. Remaining gaps:
+Content comes from your deck, resume, CSSTC abstract, presentation and design report.
+Remaining gaps:
 
 - [ ] **Hobbies paragraph** (`about.html`) — slide 20 of the deck promises it
-- [ ] **LinkedIn URL** — currently `#` in every page footer and on `contact.html`
-- [ ] **CSSTC paper link** (`research.html`) — the `Read the conference paper` button
-- [ ] **STM32 design doc link** (`project-stm32-alarm.html`)
+- [ ] **STM32 alarm design doc** (`project-stm32-alarm.html`) — the report you sent turned
+      out to be the Room Watchdog one, so this project still has no document linked
 - [ ] **Scope capture captions** (`project-gan-platform.html`) — I wrote them from the
       instrument settings visible on screen; you know which node each probe was on and
       what mode the board was in, so tighten them
 - [ ] **Contact form** — sign up at [formspree.io](https://formspree.io), paste your ID into `contact.html`
+
+## Documents
+
+Three PDFs are served from this folder and linked from the site:
+
+| File | Linked from |
+|---|---|
+| `resume.pdf` | nav on every page, About sidebar |
+| `csstc-2026-abstract.pdf` | Research page — "Read the abstract" |
+| `room-watchdog-report.pdf` | Room Watchdog project — "Full design report" |
 
 ## Conflicts I resolved — check I picked right
 
