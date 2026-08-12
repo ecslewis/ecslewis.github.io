@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research — Ella Lewis</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">ella_lewis<span class="dot">.</span>eng</a>
+    <div class="nav-links">
+      <a href="index.html">home</a>
+      <a href="projects.html">projects</a>
+      <a href="research.html" class="active">research</a>
+      <a href="about.html">about</a>
+      <a href="contact.html">contact</a>
+      <a href="resume.pdf">resume ↗</a>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" style="padding-bottom:32px">
+    <span class="kicker">Research &amp; Publications</span>
+    <h1 style="font-size:clamp(2rem,4.5vw,3rem)">Compact modelling &amp; GaN device physics</h1>
+    <p class="lead">
+      Work under Prof. Lan Wei at Waterloo on temperature effects in GaN RF HEMTs, in
+      collaboration with the National Research Council of Canada on their first-generation
+      GaN device.
+    </p>
+  </section>
+
+  <section class="tight">
+    <div class="cols">
+      <div>
+
+        <div class="section-head">
+          <span class="idx">01</span><h2>MIT Virtual Source FET modelling</h2><span class="rule"></span>
+        </div>
+        <p>
+          A compact model for GaN transistors in RF applications, implemented in Verilog-A.
+          RF GaN e-HEMT parameter fitting was carried out in Keysight ADS IC-CAP against the
+          MVSG 5.0 Beta1 model, with the emphasis on how temperature shifts transistor
+          behaviour rather than on room-temperature fit alone.
+        </p>
+        <p>
+          Compact models are what let a circuit designer simulate a device they will never
+          characterize themselves. If the model only holds at one temperature, every thermal
+          margin downstream of it is guesswork — which is why the temperature dependence was
+          the focus rather than an afterthought.
+        </p>
+
+        <figure>
+          <span class="shot pad"><img src="images/mvs-curves.jpg" alt="Simulated versus measured I-V characteristics from MVSG 5.0 fitting in IC-CAP"></span>
+          <figcaption>Simulated vs. measured data using MVSG 5.0 in Keysight ADS IC-CAP.</figcaption>
+        </figure>
+
+        <p>
+          Published and presented orally at the CSSTC national conference.
+        </p>
+        <!-- Paste the paper URL into the href below -->
+        <div class="btn-row">
+          <a class="btn" href="#">Read the conference paper ↗</a>
+        </div>
+
+        <div class="section-head" style="margin-top:56px">
+          <span class="idx">02</span><h2>Temperature effects in GaN RF HEMTs</h2><span class="rule"></span>
+        </div>
+        <p>
+          Ongoing work in Prof. Lan Wei's group, collaborating with the NRC and their
+          first-generation GaN device. The scope runs from device physics through to
+          physical circuit design — understanding what the material is doing, then
+          representing it faithfully enough that a circuit built on top behaves as predicted.
+        </p>
+
+        <div class="section-head" style="margin-top:56px">
+          <span class="idx">03</span><h2>GaN-on-Si integrated power stage</h2><span class="rule"></span>
+        </div>
+        <p>
+          New product development work on a GaN-on-Si IPS — an integrated power stage that
+          places a silicon driver die on a unidirectional GaN device. My contribution covers
+          dynamic characterization, performance evaluation against internal metrics, defining
+          test procedures for the new product, and analysing optimal and sub-optimal operating
+          parameters including slew-rate control and protection features.
+        </p>
+        <p>
+          Alongside that, technology work with the FAE team: studying competitor and
+          comparable ICs, and examining packaging and layout practices for larger dies in
+          low-ohmic and enhancement-mode GaN.
+        </p>
+
+      </div>
+
+      <aside>
+        <div class="panel" style="margin-bottom:20px">
+          <h3 style="margin-top:0">Publications</h3>
+          <table class="spec-table">
+            <tr><td>CSSTC</td><td>MIT Virtual Source FET modelling for RF GaN — oral presentation</td></tr>
+          </table>
+        </div>
+
+        <div class="panel" style="margin-bottom:20px">
+          <h3 style="margin-top:0">Tools</h3>
+          <div class="tags">
+            <span class="tag">Verilog-A</span><span class="tag">MVSG 5.0</span>
+            <span class="tag">Keysight ADS</span><span class="tag">IC-CAP</span>
+            <span class="tag">SPICE</span><span class="tag">PLECS</span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3 style="margin-top:0">Collaborators</h3>
+          <table class="spec-table">
+            <tr><td>Supervisor</td><td>Prof. Lan Wei</td></tr>
+            <tr><td>Partner</td><td>National Research Council of Canada</td></tr>
+            <tr><td>Devices</td><td>1st gen GaN RF HEMTs</td></tr>
+          </table>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2026 Ella Lewis</span>
+    <span>
+      <a href="mailto:elcslewis@gmail.com">email</a> ·
+      <a href="https://github.com/ecslewis">github</a> ·
+      <a href="#">linkedin</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>

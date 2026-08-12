@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Ella Lewis</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">ella_lewis<span class="dot">.</span>eng</a>
+    <div class="nav-links">
+      <a href="index.html">home</a>
+      <a href="projects.html">projects</a>
+      <a href="research.html">research</a>
+      <a href="about.html" class="active">about</a>
+      <a href="contact.html">contact</a>
+      <a href="resume.pdf">resume ↗</a>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" style="padding-bottom:32px">
+    <span class="kicker">About</span>
+    <h1 style="font-size:clamp(2rem,4.5vw,3rem)">Hi, I'm Ella.</h1>
+    <p class="lead">
+      I'm an electrical engineer working across GaN power electronics, PCB design and
+      embedded firmware. Most of what I enjoy sits at the seams — where the device physics,
+      the board layout and the control code all have to agree, and where getting one of
+      them wrong shows up as a waveform nobody can explain.
+    </p>
+  </section>
+
+  <section class="tight">
+    <div class="cols">
+
+      <div>
+        <div class="section-head">
+          <span class="idx">01</span><h2>Experience</h2><span class="rule"></span>
+        </div>
+
+        <div class="timeline">
+
+          <div class="tl-item">
+            <div class="when">8-MONTH CO-OP</div>
+            <h3>Applications Engineering Intern</h3>
+            <div class="where">Infineon Technologies</div>
+            <ul>
+              <li>Built SPICE and PLECS simulation models for GaN bidirectional switches (BDS), and dynamically characterized the IC under diverse stress factors.</li>
+              <li>Studied PXP degradation on a monolithic GaN device and the Miller effect on products in application.</li>
+              <li>Hands-on bench work with 400 V supplies and boost converters up to 8 kW — high-voltage material testing and high-resolution, high-frequency signal capture.</li>
+              <li>Second term focused on GaN IPS ICs (Si-on-GaN integrated gate driver) for EV chargers and on-board chargers.</li>
+              <li>Investigated how external parasitics distort measured dynamic R<sub>DS(on)</sub> in both soft- and hard-switching — a measurement problem with many confounding factors.</li>
+              <li>Reverse-engineered competitor and comparable ICs with the FAE team; studied packaging layouts for larger dies in low-ohmic and e-mode GaN.</li>
+              <li>Currently building an embedded characterization platform: Python GUI to MCU control of GaN BDS gate signals on a new EVB.</li>
+            </ul>
+          </div>
+
+          <div class="tl-item">
+            <div class="when">CO-OP</div>
+            <h3>Power Distribution Engineer</h3>
+            <div class="where">Equans</div>
+            <ul>
+              <li><!-- ADD: 2–3 bullets on what you did at Equans. This is the one section the deck doesn't cover in detail. --> Add a few lines here — the deck links to this section but doesn't spell it out.</li>
+            </ul>
+          </div>
+
+          <div class="tl-item">
+            <div class="when">UNDERGRADUATE RESEARCH</div>
+            <h3>Undergraduate Researcher — GaN Semiconductors</h3>
+            <div class="where">WEIS Group · Prof. Lan Wei</div>
+            <ul>
+              <li>Compact modelling of GaN transistors for RF applications in Verilog-A (MIT Virtual Source).</li>
+              <li>RF GaN e-HEMT fitting via Keysight ADS IC-CAP against MVSG 5.0 Beta1, focused on temperature dependence.</li>
+              <li>Collaborated with the National Research Council of Canada on their 1st generation GaN device.</li>
+              <li>Published and presented orally at the CSSTC national conference.</li>
+            </ul>
+          </div>
+
+          <div class="tl-item">
+            <div class="when">DESIGN TEAM</div>
+            <h3>Avionics / PCB Design</h3>
+            <div class="where">Waterloo Rocketry</div>
+            <ul>
+              <li>Designed the injector sensor hub — a 2-layer board aggregating six analog sensor ports onto the vehicle CAN bus.</li>
+              <li>Worked to shared avionics conventions across connectors, CAN addressing and mechanical footprint.</li>
+            </ul>
+          </div>
+
+          <div class="tl-item">
+            <div class="when">EDUCATION</div>
+            <h3>BASc Electrical Engineering</h3>
+            <div class="where">University of Waterloo</div>
+            <ul>
+              <li><!-- ADD: graduation year, any distinctions, relevant coursework -->Add graduation year and any relevant coursework or distinctions.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="section-head" style="margin-top:56px">
+          <span class="idx">02</span><h2>What I've learned the hard way</h2><span class="rule"></span>
+        </div>
+        <p>
+          GaN is unforgiving in a way silicon is not. At roughly 100 V/ns slew rate, layout
+          decisions that would be harmless on a silicon design become the dominant error
+          term — and the same parasitics that ruin your switching waveform also corrupt the
+          serial link you were using to observe it. Good layout practice and disciplined
+          in-lab debugging aren't polish on top of the design; on these parts they are the
+          design.
+        </p>
+
+        <div class="section-head" style="margin-top:56px">
+          <span class="idx">03</span><h2>Outside the lab</h2><span class="rule"></span>
+        </div>
+        <p>
+          <!-- ADD: your hobbies section — the deck promises this but doesn't fill it in. -->
+          A couple of lines about what you get up to away from a bench. Your deck had a slide
+          reserved for this, so it's clearly something you wanted to say — worth writing.
+        </p>
+      </div>
+
+      <aside>
+        <div class="panel" style="margin-bottom:20px">
+          <h3 style="margin-top:0">Details</h3>
+          <table class="spec-table">
+            <tr><td>Based in</td><td>Ontario, Canada</td></tr>
+            <tr><td>Studying</td><td>Electrical Engineering, Waterloo</td></tr>
+            <tr><td>Open to</td><td>Power electronics / embedded roles</td></tr>
+            <tr><td>Available</td><td>Add your date</td></tr>
+          </table>
+        </div>
+
+        <div class="panel" style="margin-bottom:20px">
+          <h3 style="margin-top:0">Domains</h3>
+          <div class="tags">
+            <span class="tag">GaN BDS</span><span class="tag">GaN IPS</span>
+            <span class="tag">RF HEMTs</span><span class="tag">EV chargers / OBC</span>
+            <span class="tag">Soft switching</span><span class="tag">Compact modelling</span>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3 style="margin-top:0">Bench comfortable with</h3>
+          <table class="spec-table">
+            <tr><td>Supplies</td><td>up to 400 V</td></tr>
+            <tr><td>Converters</td><td>boost to 8 kW</td></tr>
+            <tr><td>Capture</td><td>High-BW scopes, differential probes</td></tr>
+            <tr><td>Process</td><td>Board bring-up, rework, debug</td></tr>
+          </table>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>© 2026 Ella Lewis</span>
+    <span>
+      <a href="mailto:elcslewis@gmail.com">email</a> ·
+      <a href="https://github.com/ecslewis">github</a> ·
+      <a href="#">linkedin</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>
