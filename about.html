@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About — Ella Lewis</title>
 <link rel="stylesheet" href="style.css">
+<noscript><style>
+  /* JavaScript off: show everything immediately, no animation */
+  .reveal{opacity:1!important;transform:none!important;filter:none!important}
+  .spec-strip .spec{opacity:1!important;transform:none!important}
+  .section-head .rule{transform:scaleX(1)!important}
+  .timeline .tl-item::before{transform:scale(1)!important}
+</style></noscript>
 </head>
 <body>
 
@@ -46,38 +53,38 @@
         <div class="timeline">
 
           <div class="tl-item">
-            <div class="when">8-MONTH CO-OP</div>
-            <h3>Applications Engineering Intern</h3>
+            <div class="when">AUG 2025 — PRESENT · OTTAWA, ON</div>
+            <h3>Product Applications Engineering Intern</h3>
             <div class="where">Infineon Technologies</div>
             <ul>
-              <li>Built SPICE and PLECS simulation models for GaN bidirectional switches (BDS), and dynamically characterized the IC under diverse stress factors.</li>
-              <li>Studied PXP degradation on a monolithic GaN device and the Miller effect on products in application.</li>
-              <li>Hands-on bench work with 400 V supplies and boost converters up to 8 kW — high-voltage material testing and high-resolution, high-frequency signal capture.</li>
-              <li>Second term focused on GaN IPS ICs (Si-on-GaN integrated gate driver) for EV chargers and on-board chargers.</li>
-              <li>Investigated how external parasitics distort measured dynamic R<sub>DS(on)</sub> in both soft- and hard-switching — a measurement problem with many confounding factors.</li>
-              <li>Reverse-engineered competitor and comparable ICs with the FAE team; studied packaging layouts for larger dies in low-ohmic and e-mode GaN.</li>
-              <li>Currently building an embedded characterization platform: Python GUI to MCU control of GaN BDS gate signals on a new EVB.</li>
+              <li>Characterized GaN-on-Si integrated power-stage devices with electro-thermal SPICE models, extracting temperature-dependent parameters — nonlinear capacitance variation, R<sub>DS(on)</sub> degradation and protection circuit behaviour.</li>
+              <li>Ran electrical characterization under DPT, ZVS and continuous switching, investigating dynamic R<sub>DS(on)</sub> degradation, I<sub>DSAT</sub> shifts and thermal effects from &minus;50&nbsp;°C to 150&nbsp;°C.</li>
+              <li>Conducted electrical stress testing to investigate PXP degradation, assessing reliability impact through post-stress device characterization.</li>
+              <li>Partnered with the Failure Analysis team on GaN HEMT investigation using SEM imaging, cross-sectioning and optical/photon microscopy — supporting root-cause analysis, competitor benchmarking and failure mechanism assessment.</li>
+              <li>Building an embedded characterization platform: Python GUI to MCU control of GaN BDS gate signals on a new EVB.</li>
             </ul>
           </div>
 
           <div class="tl-item">
-            <div class="when">CO-OP</div>
-            <h3>Power Distribution Engineer</h3>
-            <div class="where">Equans</div>
+            <div class="when">JAN 2026 — MAY 2026 · WATERLOO, ON</div>
+            <h3>Undergraduate Research Assistant — GaN RF e-HEMT</h3>
+            <div class="where">University of Waterloo · Prof. Lan Wei</div>
             <ul>
-              <li><!-- ADD: 2–3 bullets on what you did at Equans. This is the one section the deck doesn't cover in detail. --> Add a few lines here — the deck links to this section but doesn't spell it out.</li>
+              <li>Developed a temperature-aware compact model for GaN RF e-HEMTs using the MIT Virtual Source Gate (MVSG) framework, with parameter extraction and nonlinear curve fitting on measured device data in Keysight IC-CAP.</li>
+              <li>Assisted with wafer-level probing station measurements, acquiring on-wafer DC and bidirectional data used directly for compact model extraction.</li>
+              <li>Calibrated gate-leakage model parameters to hold predictive accuracy across temperature sweeps, improving MVSG reliability for high-power, high-frequency RF in defence and space environments.</li>
+              <li>First author on the resulting CSSTC 2026 conference paper.</li>
             </ul>
           </div>
 
           <div class="tl-item">
-            <div class="when">UNDERGRADUATE RESEARCH</div>
-            <h3>Undergraduate Researcher — GaN Semiconductors</h3>
-            <div class="where">WEIS Group · Prof. Lan Wei</div>
+            <div class="when">JAN 2025 — MAY 2025 · VANCOUVER, BC</div>
+            <h3>Electrical Distribution Intern</h3>
+            <div class="where">EQUANS (Plan Group)</div>
             <ul>
-              <li>Compact modelling of GaN transistors for RF applications in Verilog-A (MIT Virtual Source).</li>
-              <li>RF GaN e-HEMT fitting via Keysight ADS IC-CAP against MVSG 5.0 Beta1, focused on temperature dependence.</li>
-              <li>Collaborated with the National Research Council of Canada on their 1st generation GaN device.</li>
-              <li>Published and presented orally at the CSSTC national conference.</li>
+              <li>Validated 70% of 600&nbsp;V–1.2&nbsp;kV MV substation infrastructure by cross-referencing short-circuit and arc flash studies, surfacing 30+ transformer impedance and breaker miscoordination issues.</li>
+              <li>Performed load calculations for feeders and branch circuits, ensuring NEC code-compliant conductor sizing and correcting discrepancies in panelboard schedules.</li>
+              <li>Built a Python QA/QC automation tool to continuously audit LV and MV board designs against spec sheets, reaching 95% accuracy on non-compliant component detection and enabling milestone tracking.</li>
             </ul>
           </div>
 
@@ -92,11 +99,12 @@
           </div>
 
           <div class="tl-item">
-            <div class="when">EDUCATION</div>
-            <h3>BASc Electrical Engineering</h3>
+            <div class="when">SEPT 2024 — PRESENT · WATERLOO, ON</div>
+            <h3>B.Eng Honours Electrical Engineering, Co-op</h3>
             <div class="where">University of Waterloo</div>
             <ul>
-              <li><!-- ADD: graduation year, any distinctions, relevant coursework -->Add graduation year and any relevant coursework or distinctions.</li>
+              <li>3.95 GPA · President's Scholarship.</li>
+              <li>Relevant coursework: Semiconductor Chemistry I, Electronic Circuits, Digital Computers I.</li>
             </ul>
           </div>
 
@@ -128,19 +136,45 @@
         <div class="panel" style="margin-bottom:20px">
           <h3 style="margin-top:0">Details</h3>
           <table class="spec-table">
-            <tr><td>Based in</td><td>Ontario, Canada</td></tr>
-            <tr><td>Studying</td><td>Electrical Engineering, Waterloo</td></tr>
+            <tr><td>Based in</td><td>Ottawa, ON</td></tr>
+            <tr><td>Studying</td><td>B.Eng EE Co-op, Waterloo</td></tr>
+            <tr><td>GPA</td><td>3.95 · President's Scholarship</td></tr>
+            <tr><td>Languages</td><td>English / French</td></tr>
             <tr><td>Open to</td><td>Power electronics / embedded roles</td></tr>
-            <tr><td>Available</td><td>Add your date</td></tr>
           </table>
+          <div class="btn-row" style="margin-top:20px">
+            <a class="btn" href="resume.pdf">Download resume ↗</a>
+          </div>
+        </div>
+
+        <div class="panel" style="margin-bottom:20px">
+          <h3 style="margin-top:0">Languages &amp; tools</h3>
+          <div class="skill-group">
+            <h4>Programming</h4>
+            <div class="tags">
+              <span class="tag">Python</span><span class="tag">C / C++</span>
+              <span class="tag">Verilog-A</span><span class="tag">VHDL</span><span class="tag">Assembly</span>
+            </div>
+          </div>
+          <div class="skill-group" style="margin-bottom:0">
+            <h4>Tools</h4>
+            <div class="tags">
+              <span class="tag">KiCad</span><span class="tag">Altium</span>
+              <span class="tag">SPICE / PSPICE</span><span class="tag">PLECS</span>
+              <span class="tag">Keysight IC-CAP</span><span class="tag">TCAD</span>
+              <span class="tag">MATLAB</span><span class="tag">AutoCAD</span>
+              <span class="tag">Revit</span><span class="tag">Bluebeam</span>
+            </div>
+          </div>
         </div>
 
         <div class="panel" style="margin-bottom:20px">
           <h3 style="margin-top:0">Domains</h3>
           <div class="tags">
-            <span class="tag">GaN BDS</span><span class="tag">GaN IPS</span>
+            <span class="tag">GaN BDS</span><span class="tag">GaN-on-Si IPS</span>
             <span class="tag">RF HEMTs</span><span class="tag">EV chargers / OBC</span>
             <span class="tag">Soft switching</span><span class="tag">Compact modelling</span>
+            <span class="tag">MV distribution</span><span class="tag">Failure analysis</span>
           </div>
         </div>
 
@@ -148,7 +182,10 @@
           <h3 style="margin-top:0">Bench comfortable with</h3>
           <table class="spec-table">
             <tr><td>Supplies</td><td>up to 400 V</td></tr>
+            <tr><td>Temperature</td><td>&minus;50 °C to 150 °C</td></tr>
             <tr><td>Converters</td><td>boost to 8 kW</td></tr>
+            <tr><td>Methods</td><td>DPT, ZVS, continuous switching</td></tr>
+            <tr><td>Analysis</td><td>SEM, cross-section, photon microscopy</td></tr>
             <tr><td>Capture</td><td>High-BW scopes, differential probes</td></tr>
             <tr><td>Process</td><td>Board bring-up, rework, debug</td></tr>
           </table>
@@ -170,6 +207,8 @@
     </span>
   </div>
 </footer>
+
+<script src="scroll.js" defer></script>
 
 </body>
 </html>

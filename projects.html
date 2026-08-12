@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Projects — Ella Lewis</title>
 <link rel="stylesheet" href="style.css">
+<noscript><style>
+  /* JavaScript off: show everything immediately, no animation */
+  .reveal{opacity:1!important;transform:none!important;filter:none!important}
+  .spec-strip .spec{opacity:1!important;transform:none!important}
+  .section-head .rule{transform:scaleX(1)!important}
+  .timeline .tl-item::before{transform:scale(1)!important}
+</style></noscript>
 </head>
 <body>
 
@@ -69,12 +76,12 @@
         <div class="card-top"><span class="status">v1.1 built</span><span>2026</span></div>
         <h3><a class="stretch" href="project-mmwave.html">mmWave WiFi Sensor Module</a></h3>
         <p>
-          24&nbsp;GHz presence radar plus a PIR watchdog on an ESP32-WROOM. The PIR gates
+          LD2410 24&nbsp;GHz presence radar plus a PIR watchdog on an ESP32-S3. The PIR gates
           the power-hungry radar so idle current stays low — two revisions, USB-C, TVS-protected.
         </p>
         <div class="card-foot">
           <div class="tags">
-            <span class="tag">ESP32</span><span class="tag">24 GHz mmWave</span>
+            <span class="tag">ESP32-S3</span><span class="tag">LD2410 24 GHz</span>
             <span class="tag">PIR</span><span class="tag">USB-C</span><span class="tag">Antenna layout</span>
           </div>
         </div>
@@ -181,6 +188,8 @@
     });
   });
 </script>
+
+<script src="scroll.js" defer></script>
 
 </body>
 </html>

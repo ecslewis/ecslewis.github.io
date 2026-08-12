@@ -14,32 +14,66 @@ No build step, no dependencies — open `index.html` in a browser.
 | `contact.html` | Contact form + links |
 | `project-*.html` | Six project detail pages |
 | `project-evb.html` | **Blank template** — copy this for new projects |
-| `images/` | PCB renders, schematics and diagrams extracted from the deck |
+| `images/` | PCB renders, schematics, scope captures |
 | `style.css` | All styling. Theme colours are the CSS variables at the top |
+| `scroll.js` | Scroll animation. Finds its own elements — no markup needed |
+| `deploy.sh` | One-time GitHub Pages setup (already done) |
+| `update.sh` | Publish changes to the live site — the one you'll keep using |
+
+## Publishing changes
+
+The site is live at **https://ecslewis.github.io**. To push updates:
+
+```
+bash ~/Documents/Infineon-EVB-Remote-Control-Board/portfolio/update.sh
+```
+
+Optionally with a message: `bash update.sh "added battery pack test results"`.
+It copies this folder over `~/Documents/ecslewis.github.io`, commits and pushes.
+Live about a minute later.
+
+## Tuning the scroll animation
+
+Three variables at the top of `style.css` control everything:
+
+```css
+--reveal-travel:   44px;    /* how far elements rise. 20px = subtle, 70px = dramatic */
+--reveal-duration: 900ms;   /* how long. lower = snappier */
+--reveal-ease:     cubic-bezier(0.16, 0.84, 0.28, 1);
+```
+
+`scroll.js` also does: a progress bar under the header, parallax on the hero and
+figure images, count-up on numeric spec values, and re-reveal when the project
+filters change. Anyone with "reduce motion" enabled in their OS gets a static site
+automatically, and there's a `<noscript>` fallback on every page.
 
 ## Still to fill in
 
-Everything else is real content pulled from your deck. These are the gaps:
+Content comes from your deck and resume. Remaining gaps:
 
-- [ ] **Equans bullets** (`about.html`) — the deck links to this section but never spells it out
-- [ ] **Hobbies paragraph** (`about.html`) — same, slide 20 promises it
-- [ ] **Graduation year / coursework** (`about.html`)
-- [ ] **Availability date** (`about.html`)
+- [ ] **Hobbies paragraph** (`about.html`) — slide 20 of the deck promises it
 - [ ] **LinkedIn URL** — currently `#` in every page footer and on `contact.html`
 - [ ] **CSSTC paper link** (`research.html`) — the `Read the conference paper` button
 - [ ] **STM32 design doc link** (`project-stm32-alarm.html`)
 - [ ] **Scope capture captions** (`project-gan-platform.html`) — I wrote them from the
       instrument settings visible on screen; you know which node each probe was on and
       what mode the board was in, so tighten them
-- [ ] **`resume.pdf`** — drop it in this folder, the nav already links to it
 - [ ] **Contact form** — sign up at [formspree.io](https://formspree.io), paste your ID into `contact.html`
 
-## Two things to double-check
+## Conflicts I resolved — check I picked right
 
-1. The deck says **dsPIC32GS502**; your repo's project config says **dsPIC33EP32GS502**.
-   I used the repo value. Fix whichever is wrong.
-2. The deck says **850 V** GaN BDS on slide 8, but the board silkscreen and the repo
-   README both say **900 V**. I used 900 V.
+| Thing | Deck says | Other source says | I used |
+|---|---|---|---|
+| Control MCU | dsPIC32GS502 | dsPIC33EP32GS502 (repo config) | repo value |
+| GaN BDS rating | 850 V (slide 8) | 900 V (silkscreen + README) | 900 V |
+| mmWave MCU | ESP32-WROOM | ESP32-S3 (resume) | ESP32-S3 |
+| CSSTC year | implied 2025 | 2026 (resume) | 2026 |
+
+Also note: your resume dates the Waterloo research as **Jan–May 2026** (finished), while
+`research.html` describes some of it as ongoing. If it's wrapped up, change "Ongoing work"
+in section 02 to past tense.
+
+`resume.pdf` is in this folder and linked from every page's nav.
 
 ## Re-theming
 

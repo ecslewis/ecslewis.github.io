@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>mmWave WiFi Sensor Module &mdash; Ella Lewis</title>
 <link rel="stylesheet" href="style.css">
+<noscript><style>
+  /* JavaScript off: show everything immediately, no animation */
+  .reveal{opacity:1!important;transform:none!important;filter:none!important}
+  .spec-strip .spec{opacity:1!important;transform:none!important}
+  .section-head .rule{transform:scaleX(1)!important}
+  .timeline .tl-item::before{transform:scale(1)!important}
+</style></noscript>
 </head>
 <body>
 
@@ -28,15 +35,15 @@
     <a class="back" href="projects.html">&larr; back to projects</a>
     <span class="kicker">PCB Design &middot; RF &middot; Embedded</span>
     <h1 style="font-size:clamp(1.8rem,4vw,2.7rem)">mmWave WiFi Sensor Module</h1>
-    <p class="lead">A room-presence sensor that pairs a 24&nbsp;GHz mmWave radar with a passive infrared sensor. The PIR acts as a watchdog so the radar &mdash; which draws real power &mdash; only wakes when something actually moves. Two board revisions, designed from schematic to bring-up.</p>
+    <p class="lead">A room-presence sensor pairing an LD2410 24&nbsp;GHz mmWave radar with a PIR sensor on an ESP32-S3. The PIR acts as a watchdog so the radar &mdash; which draws real power &mdash; only wakes when something actually moves. Full schematic and PCB, two revisions, designed from scratch to bring-up.</p>
   </section>
 
   <section class="tight">
     <div class="spec-strip">
-      <div class="spec"><div class="k">Radar</div><div class="v">24 GHz mmWave</div></div>
-      <div class="spec"><div class="k">MCU</div><div class="v">ESP32-WROOM</div></div>
-      <div class="spec"><div class="k">Rail</div><div class="v">3V3 / 5V</div></div>
-      <div class="spec"><div class="k">Input</div><div class="v">USB-C</div></div>
+      <div class="spec"><div class="k">Radar</div><div class="v">LD2410 · 24 GHz</div></div>
+      <div class="spec"><div class="k">MCU</div><div class="v">ESP32-S3</div></div>
+      <div class="spec"><div class="k">Charger</div><div class="v">TP4056</div></div>
+      <div class="spec"><div class="k">LDO</div><div class="v">AP2112K</div></div>
     </div>
   </section>
 
@@ -48,9 +55,10 @@
         </div>
         <p>A PIR sensor only detects <em>movement</em>. A person asleep in a room looks identical to an empty room. A 24&nbsp;GHz mmWave sensor detects <em>presence</em> as well as motion &mdash; but it draws significant current, which is a problem for anything battery-backed or always-on.</p>
         <p>So the two are layered: in idle states the PIR is the trigger and watchdog, and the mmWave sensor is only brought up once there is something worth looking at. That gets you presence detection without paying the radar's power bill continuously.</p>
+        <p>Around that sits the supporting power design &mdash; a TP4056 Li-ion charger and AP2112K LDO regulation, with decoupling networks and power sequencing worked out for mixed-signal reliability. The UART and SPI lines were routed with signal integrity, boot configuration and RF antenna clearance in mind, which on a board carrying a 24&nbsp;GHz radar is not something you can leave to the autorouter.</p>
         <figure>
           <span class="shot"><img src="images/mmwave-block.jpg" alt="System block diagram showing sensors, MCU, charger and USB-C port"></span>
-          <figcaption>System overview &mdash; dual sensor inputs, ESP32-WROOM, battery charger and USB-C.</figcaption>
+          <figcaption>System overview &mdash; dual sensor inputs, ESP32-S3 (WROOM module), battery charger and USB-C.</figcaption>
         </figure>
         <div class="section-head" style="margin-top:48px">
           <span class="idx">02</span><h2>Revision 1.0</h2><span class="rule"></span>
@@ -69,7 +77,7 @@
         </div>
         <p>Every change below came out of building and using v1.0:</p>
         <table class="spec-table">
-            <tr><td>MCU</td><td>Moved to ESP32-WROOM with a WiFi antenna connection for remote comms</td></tr>
+            <tr><td>MCU</td><td>Moved to the ESP32-S3 WROOM module with a WiFi antenna connection for remote comms</td></tr>
             <tr><td>Sensor orientation</td><td>PIR and mmWave mounting ports now face the same direction</td></tr>
             <tr><td>Power loop</td><td>Battery power loop shortened to cut parasitic inductance</td></tr>
             <tr><td>Silkscreen</td><td>Identifiers added for mounting ports and key test points</td></tr>
@@ -96,11 +104,13 @@
           <h3 style="margin-top:0">At a glance</h3>
           <table class="spec-table">
             <tr><td>Role</td><td>Schematic, layout, firmware</td></tr>
+            <tr><td>Timeline</td><td>May &ndash; July 2026</td></tr>
             <tr><td>Revisions</td><td>v1.0, v1.1</td></tr>
-            <tr><td>Year</td><td>2026</td></tr>
-            <tr><td>MCU</td><td>ESP32-WROOM</td></tr>
-            <tr><td>Sensors</td><td>24 GHz mmWave + PIR</td></tr>
-            <tr><td>Input</td><td>USB-C, ESD protected</td></tr>
+            <tr><td>MCU</td><td>ESP32-S3</td></tr>
+            <tr><td>Sensors</td><td>LD2410 24 GHz + PIR</td></tr>
+            <tr><td>Power</td><td>TP4056 charger, AP2112K LDO</td></tr>
+            <tr><td>Input</td><td>USB-C, TVS protected</td></tr>
+            <tr><td>Tools</td><td>KiCad, Embedded C</td></tr>
           </table>
 
         </div>
@@ -121,6 +131,8 @@
     </span>
   </div>
 </footer>
+
+<script src="scroll.js" defer></script>
 
 </body>
 </html>

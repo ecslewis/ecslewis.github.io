@@ -6,6 +6,13 @@
 <title>Ella Lewis — Electrical Engineer</title>
 <meta name="description" content="Ella Lewis — electrical engineer working in GaN power electronics, PCB design and embedded firmware.">
 <link rel="stylesheet" href="style.css">
+<noscript><style>
+  /* JavaScript off: show everything immediately, no animation */
+  .reveal{opacity:1!important;transform:none!important;filter:none!important}
+  .spec-strip .spec{opacity:1!important;transform:none!important}
+  .section-head .rule{transform:scaleX(1)!important}
+  .timeline .tl-item::before{transform:scale(1)!important}
+</style></noscript>
 </head>
 <body>
 
@@ -52,8 +59,8 @@
     <div class="spec-strip">
       <div class="spec"><div class="k">Focus</div><div class="v">GaN Power Electronics</div></div>
       <div class="spec"><div class="k">Boards designed</div><div class="v">6+</div></div>
-      <div class="spec"><div class="k">Highest rail worked</div><div class="v">400 V / 8 kW</div></div>
-      <div class="spec"><div class="k">Published</div><div class="v">CSSTC 2025</div></div>
+      <div class="spec"><div class="k">Characterized</div><div class="v">&minus;50 to 150 °C</div></div>
+      <div class="spec"><div class="k">First author</div><div class="v">CSSTC 2026</div></div>
     </div>
   </section>
 
@@ -96,13 +103,13 @@
         </div>
         <h3><a class="stretch" href="project-mmwave.html">mmWave WiFi Sensor Module</a></h3>
         <p>
-          ESP32-WROOM presence sensor pairing a 24&nbsp;GHz mmWave radar with a PIR
+          ESP32-S3 presence sensor pairing an LD2410 24&nbsp;GHz radar with a PIR
           watchdog — so the power-hungry radar only wakes when something moves.
           Two revisions, USB-C, ESD-protected.
         </p>
         <div class="card-foot">
           <div class="tags">
-            <span class="tag">ESP32</span><span class="tag">24 GHz mmWave</span>
+            <span class="tag">ESP32-S3</span><span class="tag">LD2410 24 GHz</span>
             <span class="tag">PIR</span><span class="tag">USB-C</span>
           </div>
         </div>
@@ -153,25 +160,28 @@
         <div class="skill-group">
           <h4>Firmware &amp; embedded</h4>
           <div class="tags">
-            <span class="tag">C</span><span class="tag">dsPIC33</span><span class="tag">PIC18</span>
-            <span class="tag">STM32</span><span class="tag">ESP32</span>
+            <span class="tag">C / C++</span><span class="tag">dsPIC33</span><span class="tag">PIC18</span>
+            <span class="tag">STM32</span><span class="tag">ESP32-S3</span>
+            <span class="tag">Assembly</span><span class="tag">VHDL</span>
             <span class="tag">UART · CAN · RS-485</span><span class="tag">PWM &amp; dead-time</span>
           </div>
         </div>
         <div class="skill-group">
           <h4>Design &amp; simulation</h4>
           <div class="tags">
-            <span class="tag">PCB layout (2–4 layer)</span><span class="tag">LTspice</span>
-            <span class="tag">PLECS</span><span class="tag">Keysight ADS IC-CAP</span>
-            <span class="tag">Verilog-A</span><span class="tag">Python</span><span class="tag">Git</span>
+            <span class="tag">KiCad</span><span class="tag">Altium</span>
+            <span class="tag">SPICE / PSPICE</span><span class="tag">PLECS</span>
+            <span class="tag">Keysight IC-CAP</span><span class="tag">TCAD</span>
+            <span class="tag">Verilog-A</span><span class="tag">MATLAB</span><span class="tag">Python</span>
           </div>
         </div>
         <div class="skill-group">
-          <h4>Lab</h4>
+          <h4>Lab &amp; characterization</h4>
           <div class="tags">
-            <span class="tag">400 V supplies</span><span class="tag">8 kW boost converters</span>
-            <span class="tag">Differential probes</span><span class="tag">High-BW scopes</span>
-            <span class="tag">Board bring-up</span><span class="tag">Rework</span>
+            <span class="tag">DPT · ZVS · continuous</span><span class="tag">400 V supplies</span>
+            <span class="tag">8 kW boost converters</span><span class="tag">−50 to 150 °C</span>
+            <span class="tag">Wafer-level probing</span><span class="tag">SEM &amp; cross-section</span>
+            <span class="tag">Differential probes</span><span class="tag">Board bring-up</span>
           </div>
         </div>
       </div>
@@ -179,12 +189,12 @@
       <aside class="panel">
         <h3 style="margin-top:0">Currently</h3>
         <table class="spec-table">
-          <tr><td>Role</td><td>Applications Engineer (co-op)</td></tr>
-          <tr><td>Org</td><td>Infineon Technologies</td></tr>
+          <tr><td>Role</td><td>Product Applications Engineering Intern</td></tr>
+          <tr><td>Org</td><td>Infineon Technologies, Ottawa</td></tr>
           <tr><td>Building</td><td>GaN BDS characterization platform</td></tr>
           <tr><td>Also building</td><td>5000 mAh USB-C PD pack</td></tr>
-          <tr><td>Studying</td><td>Electrical Engineering, Waterloo</td></tr>
-          <tr><td>Open to</td><td>New grad / power electronics roles</td></tr>
+          <tr><td>Studying</td><td>B.Eng EE Co-op, Waterloo — 3.95</td></tr>
+          <tr><td>Open to</td><td>Power electronics / embedded roles</td></tr>
         </table>
         <div class="btn-row" style="margin-top:20px">
           <a class="btn" href="about.html">More about me →</a>
@@ -205,6 +215,8 @@
     </span>
   </div>
 </footer>
+
+<script src="scroll.js" defer></script>
 
 </body>
 </html>
