@@ -42,7 +42,7 @@
     <div class="spec-strip">
       <div class="spec"><div class="k">Capacity</div><div class="v">5000 mAh</div></div>
       <div class="spec"><div class="k">Fast charge</div><div class="v">up to 40 W</div></div>
-      <div class="spec"><div class="k">Interface</div><div class="v">USB-C PD</div></div>
+      <div class="spec"><div class="k">Board</div><div class="v">54 &times; 52 mm, 6L</div></div>
       <div class="spec"><div class="k">Status</div><div class="v">In progress</div></div>
     </div>
   </section>
@@ -77,8 +77,28 @@
           <span class="shot pad"><img src="images/battery-sch.jpg" alt="Schematic capture of the battery pack"></span>
           <figcaption>Schematic capture (work in progress).</figcaption>
         </figure>
+
         <div class="section-head" style="margin-top:48px">
-          <span class="idx">04</span><h2>Open questions</h2><span class="rule"></span>
+          <span class="idx">04</span><h2>Layout</h2><span class="rule"></span>
+        </div>
+        <table class="spec-table">
+          <tr><td>Board</td><td>53.9 &times; 52.1 mm</td></tr>
+          <tr><td>Stackup</td><td>6-layer</td></tr>
+          <tr><td>Components</td><td>90 &mdash; 49 top, 41 bottom</td></tr>
+          <tr><td>Ports</td><td>2 &times; USB-C receptacle, SWD header, cell and thermistor connections</td></tr>
+        </table>
+        <figure>
+          <span class="shot"><img src="images/battery-3d-iso.png" alt="Angled 3D render of the assembled battery pack PCB"></span>
+          <figcaption>Assembled board, 53.9 &times; 52.1 mm, 6-layer.</figcaption>
+        </figure>
+        <p>Switching stages and their inductors sit on the bottom side, clear of the control section and both connectors.</p>
+        <div class="shot-grid">
+          <figure><span class="shot"><img src="images/battery-3d-top.png" alt="Top side 3D render of the battery pack PCB"></span><figcaption>Top &mdash; both USB-C ports, MCU, PD front ends, fuel gauge, status LEDs.</figcaption></figure>
+          <figure><span class="shot"><img src="images/battery-3d-bottom.png" alt="Bottom side 3D render of the battery pack PCB"></span><figcaption>Bottom &mdash; charger and buck/boost stages, three power inductors, ESD diodes.</figcaption></figure>
+        </div>
+
+        <div class="section-head" style="margin-top:48px">
+          <span class="idx">05</span><h2>Open questions</h2><span class="rule"></span>
         </div>
         <p>Thermal behaviour at sustained 40&nbsp;W is the part I expect to be hardest &mdash; the conversion losses and the cell heating land in the same small enclosure, and the over-temperature protection needs to trip on real thermal risk rather than on normal fast-charge operation.</p>
       </div>
@@ -91,6 +111,7 @@
             <tr><td>Capacity</td><td>5000 mAh</td></tr>
             <tr><td>Output</td><td>USB-C PD, up to 40 W</td></tr>
             <tr><td>Chemistry</td><td>Li-ion</td></tr>
+            <tr><td>Board</td><td>53.9 &times; 52.1 mm, 6-layer</td></tr>
             <tr><td>Key blocks</td><td>BMS, fuel gauge, buck/boost</td></tr>
           </table>
 
