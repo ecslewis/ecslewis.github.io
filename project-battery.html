@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>5000 mAh USB-C PD Battery Pack &mdash; Ella Lewis</title>
+<title>20 W USB-C PD Battery Pack &mdash; Ella Lewis</title>
 <link rel="stylesheet" href="style.css">
 <noscript><style>
   /* JavaScript off: show everything immediately, no animation */
@@ -34,14 +34,14 @@
   <section class="hero" style="padding-bottom:24px">
     <a class="back" href="projects.html">&larr; back to projects</a>
     <span class="kicker">Power Electronics &middot; PCB Design &middot; In Progress</span>
-    <h1 style="font-size:clamp(1.8rem,4vw,2.7rem)">5000&nbsp;mAh Portable USB-C PD Battery Pack</h1>
-    <p class="lead">A 5000&nbsp;mAh portable pack that outputs up to 40&nbsp;W over USB-C PD. The design focuses on power conversion that adapts across a wide load range, quiescent current low enough to protect shelf life, and protection against over-current, under-current and overheating.</p>
+    <h1 style="font-size:clamp(1.8rem,4vw,2.7rem)">20&nbsp;W Portable USB-C PD Battery Pack</h1>
+    <p class="lead">5000&nbsp;mAh single-cell Li-ion pack delivering 20&nbsp;W over USB-C PD. Buck/boost output holds the PD voltage across the full state of charge, with over-current, under-current and over-temperature protection.</p>
   </section>
 
   <section class="tight">
     <div class="spec-strip">
       <div class="spec"><div class="k">Capacity</div><div class="v">5000 mAh</div></div>
-      <div class="spec"><div class="k">Fast charge</div><div class="v">up to 40 W</div></div>
+      <div class="spec"><div class="k">Output</div><div class="v">20 W</div></div>
       <div class="spec"><div class="k">Board</div><div class="v">54 &times; 52 mm, 6L</div></div>
       <div class="spec"><div class="k">Status</div><div class="v">In progress</div></div>
     </div>
@@ -54,28 +54,29 @@
           <span class="idx">01</span><h2>Design targets</h2><span class="rule"></span>
         </div>
         <table class="spec-table">
-            <tr><td>Output</td><td>USB-C power delivery to mobile devices, up to 40 W</td></tr>
-            <tr><td>Conversion</td><td>Smart power conversion that adapts to load size</td></tr>
-            <tr><td>Quiescent current</td><td>Ultra-low, to guarantee battery lifetime on the shelf</td></tr>
-            <tr><td>Protection</td><td>Over-current, under-current and over-temperature</td></tr>
-            <tr><td>Cells</td><td>Li-ion cell stack with dedicated BMS</td></tr>
+            <tr><td>Output</td><td>USB-C PD, up to 20 W</td></tr>
+            <tr><td>Conversion</td><td>Buck/boost, adapts to load</td></tr>
+            <tr><td>Quiescent current</td><td>Low enough to hold shelf life</td></tr>
+            <tr><td>Protection</td><td>Over-current, under-current, over-temperature</td></tr>
+            <tr><td>Cell</td><td>Single Li-ion cell with BMS</td></tr>
         </table>
+
         <div class="section-head" style="margin-top:48px">
           <span class="idx">02</span><h2>Architecture</h2><span class="rule"></span>
         </div>
-        <p>The pack splits into a charge path and a delivery path around a shared cell stack. Input charge arrives through a USB-PD fast-charge front end into the battery charger; a fuel gauge and BMS supervise the Li-ion cells; and an adjustable buck/boost stage feeds the output PD controller so the pack can deliver correct voltage regardless of cell state of charge.</p>
-        <p>A TVS diode on the input handles surge, and an MCU coordinates the charge, gauge and conversion blocks.</p>
+        <p>Charge path and delivery path share one cell. A USB-PD front end feeds the charger, a fuel gauge and BMS supervise the cell, and an adjustable buck/boost stage feeds the output PD controller so the output voltage holds regardless of state of charge. TVS on the input, MCU coordinates charge, gauge and conversion.</p>
         <figure>
           <span class="shot"><img src="images/battery-block.jpg" alt="Block diagram of the battery pack architecture"></span>
-          <figcaption>System architecture &mdash; charge path, BMS and fuel gauge, adjustable buck/boost output.</figcaption>
+          <figcaption>Charge path, BMS and fuel gauge, adjustable buck/boost output.</figcaption>
         </figure>
+
         <div class="section-head" style="margin-top:48px">
           <span class="idx">03</span><h2>Schematic</h2><span class="rule"></span>
         </div>
-        <p>Schematic capture in progress. The buck/boost stage borrows directly from the adjustable buck converter card I built previously.</p>
+        <p>Buck/boost stage carried over from the adjustable buck converter card.</p>
         <figure>
           <span class="shot pad"><img src="images/battery-sch.jpg" alt="Schematic capture of the battery pack"></span>
-          <figcaption>Schematic capture (work in progress).</figcaption>
+          <figcaption>Schematic capture, in progress.</figcaption>
         </figure>
 
         <div class="section-head" style="margin-top:48px">
@@ -83,42 +84,32 @@
         </div>
         <table class="spec-table">
           <tr><td>Board</td><td>53.9 &times; 52.1 mm</td></tr>
-          <tr><td>Stackup</td><td>6-layer</td></tr>
-          <tr><td>Components</td><td>90 &mdash; 49 top, 41 bottom</td></tr>
-          <tr><td>Ports</td><td>2 &times; USB-C receptacle, SWD header, cell and thermistor connections</td></tr>
+          <tr><td>Stackup</td><td>6 layer</td></tr>
+          <tr><td>Components</td><td>90 (49 top, 41 bottom)</td></tr>
+          <tr><td>Ports</td><td>2 &times; USB-C, SWD header, cell and thermistor pads</td></tr>
         </table>
         <figure>
           <span class="shot"><img src="images/battery-3d-iso.png" alt="Angled 3D render of the assembled battery pack PCB"></span>
-          <figcaption>Assembled board, 53.9 &times; 52.1 mm, 6-layer.</figcaption>
+          <figcaption>Assembled board, 53.9 &times; 52.1 mm.</figcaption>
         </figure>
-        <p>Switching stages and their inductors sit on the bottom side, clear of the control section and both connectors.</p>
+        <p>Converters and their inductors sit on the bottom, control and both connectors on top.</p>
         <div class="shot-grid">
-          <figure><span class="shot"><img src="images/battery-3d-top.png" alt="Top side 3D render of the battery pack PCB"></span><figcaption>Top &mdash; both USB-C ports, MCU, PD front ends, fuel gauge, status LEDs.</figcaption></figure>
-          <figure><span class="shot"><img src="images/battery-3d-bottom.png" alt="Bottom side 3D render of the battery pack PCB"></span><figcaption>Bottom &mdash; charger and buck/boost stages, three power inductors, ESD diodes.</figcaption></figure>
+          <figure><span class="shot"><img src="images/battery-3d-top.png" alt="Top side 3D render of the battery pack PCB"></span><figcaption>Top: both USB-C ports, MCU, PD front ends, fuel gauge, status LEDs.</figcaption></figure>
+          <figure><span class="shot"><img src="images/battery-3d-bottom.png" alt="Bottom side 3D render of the battery pack PCB"></span><figcaption>Bottom: charger and buck/boost stages, three power inductors, ESD diodes.</figcaption></figure>
         </div>
-
-        <div class="section-head" style="margin-top:48px">
-          <span class="idx">05</span><h2>Open questions</h2><span class="rule"></span>
-        </div>
-        <p>Thermal behaviour at sustained 40&nbsp;W is the part I expect to be hardest &mdash; the conversion losses and the cell heating land in the same small enclosure, and the over-temperature protection needs to trip on real thermal risk rather than on normal fast-charge operation.</p>
       </div>
       <aside>
-        <div class="panel" style="margin-bottom:20px">
+        <div class="panel">
           <h3 style="margin-top:0">At a glance</h3>
           <table class="spec-table">
             <tr><td>Role</td><td>Architecture, schematic, layout</td></tr>
-            <tr><td>Status</td><td>In progress, 2026</td></tr>
+            <tr><td>Timeline</td><td>2026</td></tr>
             <tr><td>Capacity</td><td>5000 mAh</td></tr>
-            <tr><td>Output</td><td>USB-C PD, up to 40 W</td></tr>
-            <tr><td>Chemistry</td><td>Li-ion</td></tr>
-            <tr><td>Board</td><td>53.9 &times; 52.1 mm, 6-layer</td></tr>
-            <tr><td>Key blocks</td><td>BMS, fuel gauge, buck/boost</td></tr>
+            <tr><td>Output</td><td>USB-C PD, 20 W</td></tr>
+            <tr><td>Cell</td><td>Li-ion, 1 cell</td></tr>
+            <tr><td>Board</td><td>53.9 &times; 52.1 mm, 6 layer</td></tr>
+            <tr><td>Toolchain</td><td>KiCad</td></tr>
           </table>
-
-        </div>
-        <div class="panel">
-          <h3 style="margin-top:0">Build log</h3>
-          <p style="font-size:0.88rem;margin:0">This one is still on the bench. I'll add bring-up photos, efficiency curves and thermal captures here as they come out of testing.</p>
         </div>
       </aside>
     </div>
