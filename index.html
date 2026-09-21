@@ -47,8 +47,8 @@
           <a class="btn" href="contact.html">Shoot me a message</a>
         </div>
       </div>
-      <figure class="hero-figure">
-        <img src="images/mmwave-v11.jpg" alt="3D render of the mmWave WiFi sensor module, revision 1.1">
+      <figure class="hero-figure hero-3d">
+        <img src="images/battery-3d-iso.png" alt="3D render of the USB-C PD battery pack PCB">
       </figure>
     </div>
   </section>
@@ -231,6 +231,22 @@
 </footer>
 
 <script src="scroll.js" defer></script>
+<script>
+/* hero: swap the static render for a 3D model that spins like a display once the page has loaded */
+window.addEventListener('load', function () {
+  var fig = document.querySelector('.hero-3d'), img = fig.querySelector('img');
+  import('./model-viewer.min.js').then(function () {
+    var mv = document.createElement('model-viewer');
+    [['src','images/battery-pcb.glb'],
+     ['camera-orbit','-25deg 60deg 85%'],['interaction-prompt','none'],['environment-image','neutral'],
+     ['exposure','1.1'],['shadow-intensity','0.6'],['auto-rotate',''],['auto-rotate-delay','0'],
+     ['rotation-per-second','25deg'],['alt','3D model of the battery pack PCB']
+    ].forEach(function (x) { mv.setAttribute(x[0], x[1]); });
+    mv.addEventListener('load', function () { img.style.visibility = 'hidden'; mv.style.opacity = 1; });
+    fig.appendChild(mv);
+  });
+});
+</script>
 
 </body>
 </html>
