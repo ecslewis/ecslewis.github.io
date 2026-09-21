@@ -97,8 +97,24 @@
           <tr><td>Ports</td><td>2 &times; USB-C, SWD header, cell and thermistor pads</td></tr>
         </table>
         <figure>
-          <span class="shot"><img src="images/battery-3d-iso.png" alt="Angled 3D render of the assembled battery pack PCB"></span>
-          <figcaption>Assembled board, 53.9 &times; 52.1 mm.</figcaption>
+          <div class="view3d">
+            <div class="zoomctl">
+              <button type="button" data-view="out" aria-label="Zoom out">&minus;</button>
+              <button type="button" data-view="in" aria-label="Zoom in">+</button>
+              <button type="button" data-view="reset" aria-label="Reset view">reset</button>
+            </div>
+            <span class="zoomhint">drag to rotate &middot; right-drag to pan &middot; ctrl/&#8984; + scroll to zoom</span>
+            <model-viewer src="images/battery-pcb.glb"
+                          poster="images/battery-3d-iso.png"
+                          alt="Interactive 3D model of the assembled battery pack PCB"
+                          camera-controls touch-action="pan-y"
+                          camera-orbit="-25deg 55deg 70%"
+                          min-camera-orbit="auto auto 0.026m" min-field-of-view="10deg"
+                          interaction-prompt="none"
+                          environment-image="neutral" exposure="1.1" shadow-intensity="0.6"
+                          loading="lazy" reveal="auto"></model-viewer>
+          </div>
+          <figcaption>Assembled board, 53.9 &times; 52.1 mm. Interactive model exported from KiCad.</figcaption>
         </figure>
         <p>Converters and their inductors sit on the bottom, control and both connectors on top.</p>
         <div class="shot-grid">
@@ -138,6 +154,8 @@
 
 <script src="scroll.js" defer></script>
 <script src="panzoom.js" defer></script>
+<script type="module" src="model-viewer.min.js"></script>
+<script src="viewer3d.js" defer></script>
 
 </body>
 </html>
