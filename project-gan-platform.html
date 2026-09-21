@@ -62,14 +62,6 @@
         </div>
         <p>A daughter card sits on the evaluation board and owns everything real-time critical: PWM generation, dead-time insertion down to nanosecond steps, special-event triggering and the R<sub>DS(on)</sub> measurement cycle. A Python GUI on the host sets operating mode, switching frequency, duty cycle, dead-time and gate configuration.</p>
         <p>Communication runs over RS-485 differential signalling with a CRC layer on top, so a corrupted command is rejected rather than executed. EVB status polling is also available to have timely feedback on status. That combination of differential physical layer plus integrity check is what makes remote control trustworthy next to a switching GaN stage.</p>
-        <figure>
-          <span class="shot"><img src="images/gan-board-front.jpg" alt="Control daughter card, front side, showing DSP and headers"></span>
-          <figcaption>Control daughter card &mdash; DSP, programming header and PWM output.</figcaption>
-        </figure>
-        <figure>
-          <span class="shot"><img src="images/gan-board-back.jpg" alt="Control daughter card, back side"></span>
-          <figcaption>Back side &mdash; decoupling and transceiver support components.</figcaption>
-        </figure>
         <div class="section-head" style="margin-top:48px">
           <span class="idx">03</span><h2>Operating modes</h2><span class="rule"></span>
         </div>
