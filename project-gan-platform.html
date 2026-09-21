@@ -95,14 +95,22 @@
         <p>Captures from bring-up and mode validation on a high resolution oscilloscope. <!-- EDIT THE CAPTIONS: I described the instrument settings visible on screen, but you know which node each probe was on and what the device was doing. --></p>
 
         <figure>
-          <span class="shot"><img src="images/scope-gate-timing.png" alt="Four-channel oscilloscope capture at 10 microseconds per division showing gate drive timing"></span>
+          <div class="zoomview">
+            <div class="zoomctl"><button type="button" data-zoom="out" aria-label="Zoom out">&minus;</button><button type="button" data-zoom="in" aria-label="Zoom in">+</button><button type="button" data-zoom="reset" aria-label="Reset view">reset</button></div>
+            <span class="zoomhint">drag to pan &middot; ctrl/&#8984; + scroll to zoom</span>
+            <img src="images/scope-gate-timing.png" alt="Four-channel oscilloscope capture at 10 microseconds per division showing gate drive timing">
+          </div>
           <figcaption>
             Simple showcase of the simple 50kHz pulse for Rdson measurement. Red and black pulses are for the active clamping circuit. Green is one gate driving signal. The blue is simply the trigger to showcase.
           </figcaption>
         </figure>
 
         <figure>
-          <span class="shot"><img src="images/scope-polarity.png" alt="Oscilloscope capture at 20 milliseconds per division showing complementary switching at 1.45 kHz"></span>
+          <div class="zoomview">
+            <div class="zoomctl"><button type="button" data-zoom="out" aria-label="Zoom out">&minus;</button><button type="button" data-zoom="in" aria-label="Zoom in">+</button><button type="button" data-zoom="reset" aria-label="Reset view">reset</button></div>
+            <span class="zoomhint">drag to pan &middot; ctrl/&#8984; + scroll to zoom</span>
+            <img src="images/scope-polarity.png" alt="Oscilloscope capture at 20 milliseconds per division showing complementary switching at 1.45 kHz">
+          </div>
           <figcaption>
             Here we can see an overview of the signals of the system. The red signal is the output of the comparator build on the EVB, which detects cycles with precision up to 80mV. The blue and 
             black signals are the simple PWM complementary switching channel, which alternates accordingly to AC cycles.
@@ -110,11 +118,26 @@
         </figure>
 
         <figure>
-          <span class="shot"><img src="images/scope-burst.png" alt="Zoomed oscilloscope capture showing a high-frequency burst starting on an enable edge"></span>
+          <div class="zoomview">
+            <div class="zoomctl"><button type="button" data-zoom="out" aria-label="Zoom out">&minus;</button><button type="button" data-zoom="in" aria-label="Zoom in">+</button><button type="button" data-zoom="reset" aria-label="Reset view">reset</button></div>
+            <span class="zoomhint">drag to pan &middot; ctrl/&#8984; + scroll to zoom</span>
+            <img src="images/scope-burst.png" alt="Zoomed oscilloscope capture showing a high-frequency burst starting on an enable edge">
+          </div>
           <figcaption>
             Single shot capture of PWM timely delay between channel opening, to ensure safe operation and complementary time for 
             freewheeling current to dissipate through ESR before changing switching cycle. Notice the degrade on the red PWM signal,
             this is the transition from 500kHz to the desired frequency. This is implemented to limit the inrush current at pulse start, therefore, having shorter on-times.
+          </figcaption>
+        </figure>
+
+        <figure>
+          <div class="zoomview">
+            <div class="zoomctl"><button type="button" data-zoom="out" aria-label="Zoom out">&minus;</button><button type="button" data-zoom="in" aria-label="Zoom in">+</button><button type="button" data-zoom="reset" aria-label="Reset view">reset</button></div>
+            <span class="zoomhint">drag to pan &middot; ctrl/&#8984; + scroll to zoom</span>
+            <img src="images/gan-rdson.jpg" alt="Oscilloscope capture of the dynamic on-state resistance measurement">
+          </div>
+          <figcaption>
+            Dynamic R<sub>ds(on)</sub> measurement during the pulse. Numeric scales, instrument settings and timestamp redacted.
           </figcaption>
         </figure>
 
@@ -162,6 +185,7 @@
 </footer>
 
 <script src="scroll.js" defer></script>
+<script src="panzoom.js" defer></script>
 
 </body>
 </html>
