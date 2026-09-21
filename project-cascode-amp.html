@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Two-Stage CMOS Folded Cascode Amplifier &mdash; Ella Lewis</title>
+<link rel="stylesheet" href="style.css">
+<noscript><style>
+  /* JavaScript off: show everything immediately, no animation */
+  .reveal{opacity:1!important;transform:none!important;filter:none!important}
+  .spec-strip .spec{opacity:1!important;transform:none!important}
+  .section-head .rule{transform:scaleX(1)!important}
+  .timeline .tl-item::before{transform:scale(1)!important}
+</style></noscript>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">ella_lewis<span class="dot">.</span>eng</a>
+    <div class="nav-links">
+      <a href="index.html">home</a>
+      <a href="projects.html" class="active">projects</a>
+      <a href="research.html" class="">research</a>
+      <a href="about.html">about</a>
+      <a href="contact.html">contact</a>
+      <a href="resume.pdf">resume &#8599;</a>
+    </div>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" style="padding-bottom:24px">
+    <a class="back" href="projects.html">&larr; back to projects</a>
+    <span class="kicker">Analog IC Design &middot; Full Custom &middot; In Progress</span>
+    <h1 style="font-size:clamp(1.8rem,4vw,2.7rem)">Two-Stage CMOS Folded Cascode Amplifier</h1>
+    <p class="lead">Full-custom two-stage CMOS operational amplifier with a folded-cascode input stage, designed on the GlobalFoundries 180&nbsp;nm open PDK for submission to a Tiny Tapeout shuttle.</p>
+  </section>
+
+  <section class="tight">
+    <div class="spec-strip">
+      <div class="spec"><div class="k">Process</div><div class="v">GF180MCU</div></div>
+      <div class="spec"><div class="k">Topology</div><div class="v">Folded cascode</div></div>
+      <div class="spec"><div class="k">Stages</div><div class="v">2</div></div>
+      <div class="spec"><div class="k">Status</div><div class="v">In progress</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="cols">
+      <div>
+        <div class="section-head">
+          <span class="idx">01</span><h2>Design</h2><span class="rule"></span>
+        </div>
+        <p>Two-stage topology with a folded-cascode input stage. Devices are sized against open-loop gain, phase margin and bandwidth targets, with schematics captured in Xschem.</p>
+
+        <div class="section-head" style="margin-top:48px">
+          <span class="idx">02</span><h2>Toolchain</h2><span class="rule"></span>
+        </div>
+        <table class="spec-table">
+          <tr><td>PDK</td><td>GlobalFoundries 180 nm, GF180MCU open PDK</td></tr>
+          <tr><td>Schematic</td><td>Xschem</td></tr>
+          <tr><td>Simulation</td><td>Ngspice, DC, AC and transient sweeps</td></tr>
+          <tr><td>Layout</td><td>Magic</td></tr>
+          <tr><td>Verification</td><td>DRC and LVS against the foundry rule deck</td></tr>
+          <tr><td>Target</td><td>Tiny Tapeout shuttle</td></tr>
+        </table>
+
+        <div class="section-head" style="margin-top:48px">
+          <span class="idx">03</span><h2>Status</h2><span class="rule"></span>
+        </div>
+        <p>Device sizing and schematic capture in progress. Simulation results and layout go here once they are done.</p>
+      </div>
+      <aside>
+        <div class="panel">
+          <h3 style="margin-top:0">At a glance</h3>
+          <table class="spec-table">
+            <tr><td>Role</td><td>Schematic, simulation, layout</td></tr>
+            <tr><td>Timeline</td><td>Sept 2026, ongoing</td></tr>
+            <tr><td>Process</td><td>GF180MCU, 180 nm</td></tr>
+            <tr><td>Tools</td><td>Xschem, Ngspice, Magic</td></tr>
+            <tr><td>Verification</td><td>DRC, LVS</td></tr>
+            <tr><td>Target</td><td>Tiny Tapeout shuttle</td></tr>
+          </table>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>&copy; 2026 Ella Lewis</span>
+    <span>
+      <a href="mailto:elcslewis@gmail.com">email</a> &middot;
+      <a href="https://github.com/ecslewis">github</a> &middot;
+      <a href="https://www.linkedin.com/in/elcslewis/">linkedin</a>
+    </span>
+  </div>
+</footer>
+
+<script src="scroll.js" defer></script>
+<script src="panzoom.js" defer></script>
+
+</body>
+</html>

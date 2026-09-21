@@ -9,7 +9,7 @@
     var img = view.querySelector('img');
     if (!img) return;
 
-    var scale = 1, tx = 0, ty = 0, fit = 1;
+    var scale = 1, tx = 0, ty = 0, fit = 1, maxH = null;
     var MAX = 20;
     var pointers = new Map();
     var pinchDist = 0, pinchMid = null;
@@ -26,7 +26,10 @@
     }
 
     function reset() {
-      var ih = img.offsetHeight;
+      if (maxH === null) maxH = view.clientHeight;   // the CSS cap, captured once
+      var ih = img.offsetHeight;                      // height at width:100%, scale 1
+      // short/wide figures shrink the frame instead of floating in dead space
+      view.style.height = (ih ? Math.min(maxH, ih) : maxH) + 'px';
       fit = ih ? Math.min(1, view.clientHeight / ih) : 1;
       scale = fit;
       tx = 0; ty = 0;

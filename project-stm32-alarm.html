@@ -62,7 +62,11 @@
           <span class="idx">03</span><h2>Schematic</h2><span class="rule"></span>
         </div>
         <figure>
-          <span class="shot pad"><img src="images/stm32-sch.jpg" alt="Schematic of the STM32 hall-effect alarm system"></span>
+          <div class="zoomview">
+            <div class="zoomctl"><button type="button" data-zoom="out" aria-label="Zoom out">&minus;</button><button type="button" data-zoom="in" aria-label="Zoom in">+</button><button type="button" data-zoom="reset" aria-label="Reset view">reset</button></div>
+            <span class="zoomhint">drag to pan &middot; ctrl/&#8984; + scroll to zoom</span>
+            <img src="images/stm32-sch.jpg" alt="Schematic of the STM32 hall-effect alarm system">
+          </div>
           <figcaption>Prototype schematic capture.</figcaption>
         </figure>
         <div class="section-head" style="margin-top:48px">
@@ -103,6 +107,7 @@
 </footer>
 
 <script src="scroll.js" defer></script>
+<script src="panzoom.js" defer></script>
 
 </body>
 </html>

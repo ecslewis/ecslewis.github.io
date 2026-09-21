@@ -78,15 +78,27 @@
         </div>
         <p>Three-sheet hierarchical schematic: a top sheet with the CAN connector and two current-sense stages, an MCU sheet built around the PIC18F26K83 and CAN transceiver, and an analog sensor input sheet with per-channel optional divider stages for the eight sensor ports.</p>
         <figure>
-          <span class="shot pad"><img src="images/injector-sch-top.jpg" alt="Injector sensor hub top-level schematic sheet"></span>
+          <div class="zoomview">
+            <div class="zoomctl"><button type="button" data-zoom="out" aria-label="Zoom out">&minus;</button><button type="button" data-zoom="in" aria-label="Zoom in">+</button><button type="button" data-zoom="reset" aria-label="Reset view">reset</button></div>
+            <span class="zoomhint">drag to pan &middot; ctrl/&#8984; + scroll to zoom</span>
+            <img src="images/injector-sch-top.jpg" alt="Injector sensor hub top-level schematic sheet">
+          </div>
           <figcaption>Top sheet: CAN connector and current-sense stages, with hierarchical links to the MCU and analog input sheets.</figcaption>
         </figure>
         <figure>
-          <span class="shot pad"><img src="images/injector-sch-mcu.jpg" alt="Injector sensor hub MCU schematic sheet"></span>
+          <div class="zoomview">
+            <div class="zoomctl"><button type="button" data-zoom="out" aria-label="Zoom out">&minus;</button><button type="button" data-zoom="in" aria-label="Zoom in">+</button><button type="button" data-zoom="reset" aria-label="Reset view">reset</button></div>
+            <span class="zoomhint">drag to pan &middot; ctrl/&#8984; + scroll to zoom</span>
+            <img src="images/injector-sch-mcu.jpg" alt="Injector sensor hub MCU schematic sheet">
+          </div>
           <figcaption>MCU sheet: PIC18F26K83, CAN transceiver, crystal, status LEDs and programming header.</figcaption>
         </figure>
         <figure>
-          <span class="shot pad"><img src="images/injector-sch-sensors.jpg" alt="Injector sensor hub analog sensor input schematic sheet"></span>
+          <div class="zoomview">
+            <div class="zoomctl"><button type="button" data-zoom="out" aria-label="Zoom out">&minus;</button><button type="button" data-zoom="in" aria-label="Zoom in">+</button><button type="button" data-zoom="reset" aria-label="Reset view">reset</button></div>
+            <span class="zoomhint">drag to pan &middot; ctrl/&#8984; + scroll to zoom</span>
+            <img src="images/injector-sch-sensors.jpg" alt="Injector sensor hub analog sensor input schematic sheet">
+          </div>
           <figcaption>Analog sensor input sheet: eight ports with optional divider stages.</figcaption>
         </figure>
       </div>
@@ -123,6 +135,7 @@
 </footer>
 
 <script src="scroll.js" defer></script>
+<script src="panzoom.js" defer></script>
 
 </body>
 </html>
