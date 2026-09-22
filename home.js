@@ -57,7 +57,7 @@
   var countEl = document.querySelector('.h-count');
   var barEl = document.querySelector('.h-bar i');
   var bode = document.querySelector('.h-slide-bode');
-  var iv = document.querySelector('.h-slide-iv .iv');
+  var iv = null;   // research slide now animates itself (iv-anim.js)
   var work = document.querySelector('.h-work-body');
   var slideMV = {};
   var active = -1;

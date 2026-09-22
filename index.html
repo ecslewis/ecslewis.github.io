@@ -71,10 +71,7 @@
             </svg>
           </div>
           <div class="h-slide h-slide-iv" data-i="4">
-            <div class="iv">
-              <img src="images/research-iv.png" alt="">
-              <span class="iv-cover"></span><span class="iv-cursor"></span>
-            </div>
+            <div class="iv"><canvas class="iv-anim"></canvas></div>
           </div>
           <div class="h-stage-meta"><span class="h-count">01</span><span class="h-bar"><i></i></span><span>05</span></div>
         </div>
@@ -116,7 +113,7 @@
           <a class="h-more" href="project-cascode-amp.html">read more →</a>
         </article>
         <article class="h-chapter" data-i="4">
-          <div class="h-chapter-media"><img src="images/research-iv.png" alt="Measured and modeled GaN HEMT output characteristics, drain current against drain voltage for a sweep of gate voltages"></div>
+          <div class="h-chapter-media"><div class="iv"><canvas class="iv-anim" aria-label="Animated GaN HEMT output characteristics, curves drawn one gate voltage at a time"></canvas></div></div>
           <span class="h-status">Research · CSSTC 2026 · first author</span>
           <h3><a href="research.html">A GaN HEMT compact model that holds at 500&nbsp;°C</a></h3>
           <p>Commercial GaN compact models are calibrated to about 185&nbsp;°C. Wildfire sensing, downhole drilling and planetary probes need transistors working at 200 to 500&nbsp;°C. This work extends the industry-standard MVSG model into that range and validates it against measured devices from 22&nbsp;°C to 500&nbsp;°C.</p>
@@ -188,6 +185,7 @@
 </footer>
 
 <script src="zvs-anim.js" defer></script>
+<script src="iv-anim.js" defer></script>
 <script src="home.js" defer></script>
 </body>
 </html>

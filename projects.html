@@ -48,9 +48,27 @@
       <button class="filter" data-filter="firmware">firmware</button>
       <button class="filter" data-filter="rf">rf &amp; sensing</button>
       <button class="filter" data-filter="software">systems software</button>
+      <button class="filter" data-filter="research">research</button>
     </div>
 
     <div class="grid" id="project-grid">
+
+      <!-- ---------- CSSTC 2026 paper ---------- -->
+      <article class="card" data-tags="research">
+        <div class="card-media card-iv"><canvas class="iv-anim" aria-label="Animated GaN HEMT output characteristics, curves drawn one gate voltage at a time"></canvas></div>
+        <div class="card-top"><span class="status">Published, CSSTC 2026</span><span>2026</span></div>
+        <h3><a class="stretch" href="research.html">RF GaN HEMT Compact Modelling with High-Temperature Effects</a></h3>
+        <p>
+          First-author conference paper and oral presentation. Extends the MVSG compact model to 500&nbsp;°C
+          and validates it against measured NRC GaN HEMTs from 22&nbsp;°C to 500&nbsp;°C with one parameter set.
+        </p>
+        <div class="card-foot">
+          <div class="tags">
+            <span class="tag">GaN HEMT</span><span class="tag">MVSG</span>
+            <span class="tag">Verilog-A</span><span class="tag">IC-CAP</span>
+          </div>
+        </div>
+      </article>
 
       <!-- ---------- Folded cascode amplifier ---------- -->
       <article class="card" data-tags="asic">
@@ -254,6 +272,7 @@
 <script src="scroll.js" defer></script>
 <script src="spin3d.js" defer></script>
 <script src="zvs-anim.js" defer></script>
+<script src="iv-anim.js" defer></script>
 
 </body>
 </html>

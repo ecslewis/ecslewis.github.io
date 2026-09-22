@@ -175,7 +175,7 @@ body.home main { overflow-x: clip; }
   position: relative; width: 94%; border-radius: 6px; overflow: hidden;
   background: #fff; box-shadow: 0 30px 80px rgba(0,0,0,.5);
 }
-.h-slide-iv img { display: block; width: 100%; height: auto; }
+.iv canvas.iv-anim { display: block; width: 100%; aspect-ratio: 800 / 640; height: auto; }
 /* plot area of the figure (axes stay visible): x 20.9 to 94.4 %, y 5.2 to 80.2 % */
 .iv-cover {
   position: absolute; top: 5.2%; height: 75%;
@@ -244,6 +244,7 @@ body.home main { overflow-x: clip; }
   .h-chapter { min-height: 0; opacity: 1; padding: 6vh 0; }
   .h-chapter-media { display: block; margin-bottom: 22px; }
   .h-chapter-media img { width: 100%; height: auto; }
+  .h-chapter-media .iv { background: #fff; border-radius: 6px; overflow: hidden; }
   .h-chapter-media canvas.zvs-anim { display: block; width: 100%; aspect-ratio: 16 / 10; border-radius: 6px; }
   .h-skill-cols { grid-template-columns: 1fr 1fr; gap: 32px 24px; }
   .h-now dl { grid-template-columns: 1fr; }
