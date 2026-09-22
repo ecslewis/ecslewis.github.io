@@ -219,6 +219,19 @@ body.home main { overflow-x: clip; }
 .h-links a { font-family: "JetBrains Mono", var(--mono); font-size: 0.85rem; color: var(--fg-muted); text-decoration: none; }
 .h-links a:hover { color: var(--accent); }
 
+/* ---------- contact page ---------- */
+.c-main { min-height: calc(100svh - 140px); display: flex; align-items: center; }
+.c-wrap { width: 100%; max-width: 1240px; margin: 0 auto; padding: 12vh 24px; }
+.c-list { list-style: none; margin: 36px 0 0; padding: 0; border-bottom: 1px solid var(--line); }
+.c-list li { border-top: 1px solid var(--line); }
+.c-list a {
+  display: grid; grid-template-columns: 160px 1fr; align-items: baseline; gap: 24px;
+  padding: 26px 0; text-decoration: none; color: var(--fg);
+}
+.c-k { font-family: "JetBrains Mono", var(--mono); font-size: 0.8rem; color: var(--fg-dim); }
+.c-v { font-size: clamp(1.6rem, 4.4vw, 3.4rem); line-height: 1.05; letter-spacing: -0.03em; font-weight: 600; transition: color .3s, transform .5s cubic-bezier(.16,.84,.28,1); }
+.c-list a:hover .c-v { color: var(--accent); transform: translateX(10px); }
+
 /* ---------- small screens: no pinning, media sits in each chapter ---------- */
 @media (max-width: 900px) {
   .h-hero { flex-direction: column; align-items: stretch; justify-content: center; padding-top: 4vh; padding-bottom: 14vh; }
@@ -234,6 +247,8 @@ body.home main { overflow-x: clip; }
   .h-chapter-media canvas.zvs-anim { display: block; width: 100%; aspect-ratio: 16 / 10; border-radius: 6px; }
   .h-skill-cols { grid-template-columns: 1fr 1fr; gap: 32px 24px; }
   .h-now dl { grid-template-columns: 1fr; }
+  .c-list a { grid-template-columns: 1fr; gap: 6px; padding: 20px 0; }
+  .c-v { overflow-wrap: anywhere; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact — Ella Lewis</title>
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="home.css">
 <noscript><style>
   /* JavaScript off: show everything immediately, no animation */
   .reveal{opacity:1!important;transform:none!important;filter:none!important}
@@ -13,11 +14,11 @@
   .timeline .tl-item::before{transform:scale(1)!important}
 </style></noscript>
 </head>
-<body>
+<body class="home">
 
 <header class="site-header">
   <nav class="nav">
-    <a class="brand" href="index.html">ella_lewis<span class="dot">.</span>eng</a>
+    <a class="brand" href="index.html">ella<span class="dot">.</span>lewis</a>
     <div class="nav-links">
       <a href="index.html">home</a>
       <a href="projects.html">projects</a>
@@ -27,82 +28,16 @@
   </nav>
 </header>
 
-<main class="wrap">
-
-  <section class="hero" style="padding-bottom:32px">
-    <span class="kicker">Contact</span>
-    <h1 style="font-size:clamp(2rem,4.5vw,3rem)">Let's talk.</h1>
-    <p class="lead">
-      Open to power electronics and embedded roles, and always happy to talk about
-      GaN, weird switching waveforms, or a board that won't behave.
-      Email is the fastest way to reach me.
-    </p>
+<main class="c-main">
+  <section class="c-wrap">
+    <span class="h-kicker" data-reveal>Contact</span>
+    <ul class="c-list">
+      <li data-reveal style="--d:60ms"><a href="mailto:elcslewis@gmail.com"><span class="c-k">email</span><span class="c-v">elcslewis@gmail.com</span></a></li>
+      <li data-reveal style="--d:120ms"><a href="https://www.linkedin.com/in/elcslewis/" target="_blank" rel="noopener"><span class="c-k">linkedin</span><span class="c-v">/in/elcslewis</span></a></li>
+      <li data-reveal style="--d:180ms"><a href="https://github.com/ecslewis" target="_blank" rel="noopener"><span class="c-k">github</span><span class="c-v">ecslewis</span></a></li>
+      <li data-reveal style="--d:240ms"><a href="resume.pdf" target="_blank" rel="noopener"><span class="c-k">resume</span><span class="c-v">resume.pdf</span></a></li>
+    </ul>
   </section>
-
-  <section class="tight">
-    <div class="cols">
-
-      <div class="panel">
-        <h3 style="margin-top:0">Send a message</h3>
-        <!-- ============================================================
-             This form needs a backend to actually send anything.
-             Easiest option: sign up at formspree.io (free tier), then
-             replace YOUR_ID below with the ID they give you.
-             Or just delete the form and keep the links on the right.
-             ============================================================ -->
-        <form action="https://formspree.io/f/YOUR_ID" method="POST">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required>
-
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required>
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-
-          <button class="btn primary" type="submit" style="cursor:pointer">Send →</button>
-        </form>
-      </div>
-
-      <aside>
-        <div class="panel">
-          <h3 style="margin-top:0">Elsewhere</h3>
-          <ul class="contact-list">
-            <li>
-              <a href="mailto:elcslewis@gmail.com">
-                <span>elcslewis@gmail.com</span>
-                <span class="label">email</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/elcslewis/">
-                <span>/in/elcslewis</span>
-                <span class="label">linkedin</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/ecslewis">
-                <span>github.com/ecslewis</span>
-                <span class="label">github</span>
-              </a>
-            </li>
-            <li>
-              <a href="resume.pdf" target="_blank" rel="noopener">
-                <span>Download CV</span>
-                <span class="label">pdf</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <p class="note" style="margin-top:20px">
-          Replace the <code>#</code> links with your real profile URLs before publishing.
-        </p>
-      </aside>
-
-    </div>
-  </section>
-
 </main>
 
 <footer class="site-footer">
@@ -116,7 +51,7 @@
   </div>
 </footer>
 
-<script src="scroll.js" defer></script>
+<script src="home.js" defer></script>
 
 </body>
 </html>

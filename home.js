@@ -47,7 +47,7 @@
   var heroBoard = document.querySelector('.h-hero-board');
   var heroText = document.querySelector('.h-hero-text');
   var heroMV = null;
-  window.addEventListener('load', function () {
+  if (heroBoard) window.addEventListener('load', function () {
     makeViewer(heroBoard, 'images/battery-pcb.glb', '-25deg 60deg 80%').then(function (mv) { heroMV = mv; });
   });
 
@@ -63,7 +63,7 @@
   var active = -1;
 
   // start loading the stage models shortly before the section arrives
-  new IntersectionObserver(function (es, obs) {
+  if (work) new IntersectionObserver(function (es, obs) {
     if (!es[0].isIntersecting || !desktop.matches) return;
     obs.disconnect();
     slides.forEach(function (s) {
@@ -81,7 +81,7 @@
     chapters.forEach(function (c) { c.classList.toggle('on', +c.getAttribute('data-i') === i); });
     if (countEl) countEl.textContent = ('0' + (i + 1)).slice(-2);
   }
-  setActive(0);
+  if (chapters.length) setActive(0);
 
   /* ---------- per-frame update ---------- */
   var sy = window.scrollY, ty = sy;   // smoothed and target scroll
@@ -96,7 +96,7 @@
 
     // hero: board turns and drifts up as you leave, text lifts and fades
     var p = Math.min(1, Math.max(0, sy / vh));
-    if (!reduce) {
+    if (heroBoard && !reduce) {
       heroBoard.style.transform = 'translate3d(0,' + (-p * 18) + 'vh,0) scale(' + (1 - p * 0.12) + ')';
       heroBoard.style.opacity = String(1 - p * 0.9);
       heroText.style.transform = 'translate3d(0,' + (-p * 8) + 'vh,0)';
@@ -108,7 +108,7 @@
     }
 
     // showcase: the chapter crossing the middle of the screen owns the stage
-    if (desktop.matches) {
+    if (chapters.length && desktop.matches) {
       var mid = vh * 0.5, idx = active, q = 0;
       for (var i = 0; i < chapters.length; i++) {
         var r = chapters[i].getBoundingClientRect();
