@@ -5,16 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ella Lewis</title>
 <meta name="description" content="Won't claim to be an expert in a field I am not familiar in, but just know that I am trying my best to learn. I'll get there one day ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<noscript><style>
-  /* JavaScript off: show everything immediately, no animation */
-  .reveal{opacity:1!important;transform:none!important;filter:none!important}
-  .spec-strip .spec{opacity:1!important;transform:none!important}
-  .section-head .rule{transform:scaleX(1)!important}
-  .timeline .tl-item::before{transform:scale(1)!important}
-</style></noscript>
+<link rel="stylesheet" href="home.css">
 </head>
-<body>
+<body class="home">
 
 <header class="site-header">
   <nav class="nav">
@@ -22,198 +19,161 @@
     <div class="nav-links">
       <a href="index.html" class="active">home</a>
       <a href="projects.html">projects</a>
-      <a href="research.html">research</a>
-      <a href="about.html">about</a>
       <a href="contact.html">contact</a>
-      <a href="resume.pdf">resume ↗</a>
+      <a href="resume.pdf" target="_blank" rel="noopener">resume ↗</a>
     </div>
   </nav>
 </header>
 
-<main class="wrap">
+<main>
 
   <!-- ============================= HERO ============================= -->
-  <section class="hero">
-    <div class="hero-cols">
-      <div>
-        <span class="kicker">Be kind, work hard</span>
-        <h1>Wait don't leave...<span class="hl"> Okay, this look like a generic portfolio</span>, but just give me a minute of your time...<span class="cursor">_</span></h1>
-        <p class="lead">
-        I'll even throw in a little joke for the road c: 
-        </p>
-        <div class="btn-row">
-          <p> But if you are just curious then feel free to take a walk around...</p>
-          <a class="btn primary" href="projects.html">I'm fine, let me checkout the projects →</a>
-          <a class="btn" href="contact.html">Shoot me a message</a>
-        </div>
-      </div>
-      <figure class="hero-figure hero-3d">
-        <img src="images/battery-3d-iso.png" alt="3D render of the USB-C PD battery pack PCB">
-      </figure>
+  <section class="h-hero" id="top">
+    <div class="h-hero-board" aria-hidden="true">
+      <img src="images/battery-3d-iso.png" alt="">
     </div>
+    <div class="h-hero-text">
+      <span class="h-kicker" data-reveal>Be kind, work hard</span>
+      <h1 data-reveal style="--d:80ms">Wait don't leave...<span class="hl"> Okay, this look like a generic portfolio</span>, but just give me a minute of your time...<span class="cursor">_</span></h1>
+      <p class="h-lead" data-reveal style="--d:160ms">I'll even throw in a little joke for the road c:</p>
+    </div>
+    <a class="h-scroll" href="#facts" data-reveal style="--d:320ms"><span>scroll</span><i></i></a>
   </section>
 
-  <!-- ============================= SPEC STRIP ============================= -->
-  <section class="tight">
-    <div class="spec-strip">
-      <div class="spec"><div class="k">What I am particularly keen on</div><div class="v">Semiconductors and AMS circuits</div></div>
-      <div class="spec"><div class="k">What do I study in my free time?</div><div class="v"> GaN Semiconductor Physics, analog circuit, PCB Design</div></div>
-      <div class="spec"><div class="k">Outside of the technical world, I...</div><div class="v">LOVE FISHING! SKIING! GOLFING! and DOGS!!</div></div>
-      <div class="spec"><div class="k">Fun fact...</div><div class="v">I wrote, published and presented my first conference paper this year at the CSSTC!!</div></div>
-    </div>
+  <!-- ============================= FACTS ============================= -->
+  <section class="h-facts" id="facts">
+    <div class="h-row" data-reveal><div class="k">What I am particularly keen on</div><div class="v">Semiconductors and AMS circuits</div></div>
+    <div class="h-row" data-reveal><div class="k">What do I study in my free time?</div><div class="v">GaN Semiconductor Physics, analog circuit, PCB Design</div></div>
+    <div class="h-row" data-reveal><div class="k">Outside of the technical world, I...</div><div class="v">LOVE FISHING! SKIING! GOLFING! and DOGS!!</div></div>
+    <div class="h-row" data-reveal><div class="k">Fun fact...</div><div class="v">I wrote, published and presented my first conference paper this year at the CSSTC!!</div></div>
   </section>
 
-  <!-- ============================= FEATURED ============================= -->
-  <section>
-    <div class="section-head">
-      <span class="idx">01</span>
-      <h2>Selected work</h2>
-      <span class="rule"></span>
-      <a class="mono" style="font-size:0.8rem" href="projects.html">all projects →</a>
+  <!-- ============================= WORK ============================= -->
+  <section class="h-work" id="work">
+    <div class="h-work-head" data-reveal>
+      <span class="h-kicker">Selected work</span>
+      <a class="h-all" href="projects.html">all projects →</a>
     </div>
 
-    <div class="grid">
-
-      <!-- ---------- Folded cascode amplifier ---------- -->
-      <article class="card">
-        <div class="card-top"><span class="status wip">In progress</span><span>2026</span></div>
-        <h3><a class="stretch" href="project-cascode-amp.html">Two-Stage CMOS Folded Cascode Amplifier</a></h3>
-        <p>
-          Full-custom two-stage CMOS op-amp with a folded-cascode input stage on the
-          GlobalFoundries 180&nbsp;nm open PDK, targeting a Tiny Tapeout shuttle.
-          Xschem, Ngspice and Magic.
-        </p>
-        <div class="card-foot">
-          <div class="tags">
-            <span class="tag">GF180MCU</span><span class="tag">Analog</span>
-            <span class="tag">Xschem</span><span class="tag">Magic</span>
+    <div class="h-work-body">
+      <div class="h-stage" aria-hidden="true">
+        <div class="h-stage-inner">
+          <div class="h-slide" data-i="0"><canvas class="zvs-anim"></canvas></div>
+          <div class="h-slide h-slide-3d" data-i="1" data-glb="images/mmwave-pcb.glb" data-radius="95%"><img src="images/mmwave-3d-iso.png" alt=""></div>
+          <div class="h-slide h-slide-3d" data-i="2" data-glb="images/battery-pcb.glb" data-radius="72%"><img src="images/battery-3d-iso.png" alt=""></div>
+          <div class="h-slide h-slide-bode" data-i="3">
+            <svg viewBox="0 0 400 260" preserveAspectRatio="xMidYMid meet">
+              <g class="bode-grid">
+                <line x1="40" y1="20" x2="40" y2="230"/><line x1="40" y1="230" x2="385" y2="230"/>
+                <line x1="40" y1="72" x2="385" y2="72"/><line x1="40" y1="125" x2="385" y2="125"/><line x1="40" y1="178" x2="385" y2="178"/>
+                <line x1="126" y1="20" x2="126" y2="230"/><line x1="212" y1="20" x2="212" y2="230"/><line x1="298" y1="20" x2="298" y2="230"/>
+              </g>
+              <path class="bode-mag" pathLength="1" d="M40 48 L150 48 C185 48 200 58 222 80 L360 222"/>
+              <path class="bode-ph" pathLength="1" d="M40 98 L170 98 C215 98 230 122 250 150 C275 186 300 192 380 194"/>
+              <text x="46" y="40">gain</text><text x="46" y="92">phase</text><text x="352" y="248">freq</text>
+            </svg>
           </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-media card-scope"><canvas class="zvs-anim" aria-label="Animated AC ZVS waveform: PWM, V_DS and I_D"></canvas></div>
-        <div class="card-top">
-          <span class="status">Completed, Tested, Pushed internally</span>
-          <span>2026</span>
-        </div>
-        <h3><a class="stretch" href="project-gan-platform.html">Universal ZVS / Characterization Platform</a></h3>
-        <p>
-          Owned the end to end design and implementation of a DSP control daughter card with GUI control for a 900&nbsp;V GaN bidirectional
-          switch. AC-ZVS with positive and negative polarity detection, dynamic R<sub>DS(on)</sub> pulsing measurements, and noise protected serial communication fitted for high EMI environments.
-        </p>
-        <div class="card-foot">
-          <div class="tags">
-            <span class="tag">RS-485</span><span class="tag">UART</span><span class="tag">Python</span><span class="tag">Altium</span><span class="tag">C</span><span class="tag">GaN</span>
+          <div class="h-slide h-slide-iv" data-i="4">
+            <div class="iv">
+              <img src="images/research-iv.png" alt="">
+              <span class="iv-cover"></span><span class="iv-cursor"></span>
+            </div>
           </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-media"><img src="images/mmwave-3d-iso.png" data-glb="images/mmwave-pcb.glb" data-orbit="-25deg 58deg 95%" alt="3D render of the mmWave sensor module PCB"></div>
-        <div class="card-top">
-          <span class="status">v1.1 built</span>
-          <span>2026</span>
-        </div>
-        <h3><a class="stretch" href="project-mmwave.html">Room Watchdog — mmWave Sensor Module</a></h3>
-        <p>
-          Started because snacks kept disappearing from a room during the day. Detects someone
-          walking in and sends a Wi-Fi notification, using a radar that only wakes when a
-          low-power motion sensor notices something first. Two board revisions built and tested.
-        </p>
-        <div class="card-foot">
-          <div class="tags">
-            <span class="tag">ESP32-S3</span><span class="tag">LD2410 24 GHz</span>
-            <span class="tag">PIR</span><span class="tag">USB-C</span>
-          </div>
-        </div>
-      </article>
-
-      <article class="card">
-        <div class="card-media"><img src="images/battery-3d-iso.png" data-glb="images/battery-pcb.glb" alt="3D render of the battery pack PCB"></div>
-        <div class="card-top">
-          <span class="status wip">In progress</span>
-          <span>2026</span>
-        </div>
-        <h3><a class="stretch" href="project-battery.html">20 W USB-C PD Battery Pack</a></h3>
-        <p>
-          5000&nbsp;mAh single-cell Li-ion pack delivering 20&nbsp;W over USB-C PD.
-          Buck/boost output holds the PD voltage across the full state of charge.
-          54 &times; 52 mm, 6 layer.
-        </p>
-        <div class="card-foot">
-          <div class="tags">
-            <span class="tag">USB-C PD</span><span class="tag">BMS</span>
-            <span class="tag">Buck/Boost</span><span class="tag">Li-ion</span>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- ============================= CAPABILITIES ============================= -->
-  <section>
-    <div class="section-head">
-      <span class="idx">02</span>
-      <h2>What I work with</h2>
-      <span class="rule"></span>
-    </div>
-
-    <div class="cols">
-      <div>
-        <div class="skill-group">
-          <h4>Power electronics</h4>
-          <div class="tags">
-            <span class="tag">HEMT</span><span class="tag">High voltage transistors</span>
-            <span class="tag">Buck/Boost topologies</span><span class="tag">100V/ns+ circuit</span>
-            <span class="tag">Dynamic R<sub>DS(on) thermal</sub></span><span class="tag">Slew-rate control</span>
-            <span class="tag"> Wide bandgap EMI &amp; parasitics</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h4>Firmware &amp; embedded</h4>
-          <div class="tags">
-            <span class="tag">C / C++</span>
-            <span class="tag">Assembly</span><span class="tag">VHDL</span>
-            <span class="tag">Python</span><span class="tag">IIC, UART, SPI, CAN</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h4>Design &amp; simulation</h4>
-          <div class="tags">
-            <span class="tag">KiCad</span><span class="tag">Altium</span>
-            <span class="tag">SPICE / PSPICE</span><span class="tag">PLECS</span>
-            <span class="tag">Keysight IC-CAP</span><span class="tag">TCAD</span>
-            <span class="tag">Verilog-A</span><span class="tag">MATLAB</span><span class="tag">Python</span>
-          </div>
-        </div>
-        <div class="skill-group">
-          <h4>Lab &amp; characterization</h4>
-          <div class="tags">
-            <span class="tag">900V+ supplies</span>
-            <span class="tag">8 kW converters</span>
-            <span class="tag">Wafer-level probing</span><span class="tag">STEM</span>
-            <span class="tag">Differential/passive probes</span><span class="tag">Board bring-up</span>
-            <span class="tag">High-res oscilloscope</span><span class="tag">Semiconductor analyzer</span>
-          </div>
+          <div class="h-stage-meta"><span class="h-count">01</span><span class="h-bar"><i></i></span><span>05</span></div>
         </div>
       </div>
 
-      <aside class="panel">
-        <h3 style="margin-top:0">Currently</h3>
-        <table class="spec-table">
-          <tr><td>Role</td><td>Product Applications Engineering Intern</td></tr>
-          <tr><td>Org</td><td>Infineon Technologies</td></tr>
-          <tr><td>Working on</td><td>650V GaN Bidirectional Transistors/Integrated</td></tr>
-          <tr><td>Also building</td><td>5000 mAh USB-C PD pack</td></tr>
-          <tr><td>Studying</td><td>B.Eng Elec Eng Co-op, Waterloo</td></tr>
-          <tr><td>Open to</td><td>Any hardware/semiconductor related fields!</td></tr>
-        </table>
-        <div class="btn-row" style="margin-top:20px">
-          <a class="btn" href="about.html">More about me →</a>
-        </div>
-      </aside>
+      <div class="h-chapters">
+        <article class="h-chapter" data-i="0">
+          <div class="h-chapter-media"><canvas class="zvs-anim"></canvas></div>
+          <span class="h-status">Completed, Tested, Pushed internally · 2026</span>
+          <h3><a href="project-gan-platform.html">Universal ZVS / Characterization Platform</a></h3>
+          <p>Owned the end to end design and implementation of a DSP control daughter card with GUI control for a 900&nbsp;V GaN bidirectional switch. AC-ZVS with positive and negative polarity detection, dynamic R<sub>DS(on)</sub> pulsing measurements, and noise protected serial communication fitted for high EMI environments.</p>
+          <p class="h-tags">RS-485 · UART · Python · Altium · C · GaN</p>
+          <a class="h-more" href="project-gan-platform.html">read more →</a>
+        </article>
+
+        <article class="h-chapter" data-i="1">
+          <div class="h-chapter-media"><img src="images/mmwave-3d-iso.png" alt="3D render of the mmWave sensor module PCB"></div>
+          <span class="h-status">v1.1 built · 2026</span>
+          <h3><a href="project-mmwave.html">Room Watchdog: mmWave Sensor Module</a></h3>
+          <p>Started because snacks kept disappearing from a room during the day. Detects someone walking in and sends a Wi-Fi notification, using a radar that only wakes when a low-power motion sensor notices something first. Two board revisions built and tested.</p>
+          <p class="h-tags">ESP32-S3 · LD2410 24 GHz · PIR · USB-C</p>
+          <a class="h-more" href="project-mmwave.html">read more →</a>
+        </article>
+
+        <article class="h-chapter" data-i="2">
+          <div class="h-chapter-media"><img src="images/battery-3d-iso.png" alt="3D render of the battery pack PCB"></div>
+          <span class="h-status">In progress · 2026</span>
+          <h3><a href="project-battery.html">20 W USB-C PD Battery Pack</a></h3>
+          <p>5000&nbsp;mAh single-cell Li-ion pack delivering 20&nbsp;W over USB-C PD. Buck/boost output holds the PD voltage across the full state of charge. 54 &times; 52 mm, 6 layer.</p>
+          <p class="h-tags">USB-C PD · BMS · Buck/Boost · Li-ion</p>
+          <a class="h-more" href="project-battery.html">read more →</a>
+        </article>
+
+        <article class="h-chapter" data-i="3">
+          <span class="h-status">In progress · 2026</span>
+          <h3><a href="project-cascode-amp.html">Two-Stage CMOS Folded Cascode Amplifier</a></h3>
+          <p>Full-custom two-stage CMOS op-amp with a folded-cascode input stage on the GlobalFoundries 180&nbsp;nm open PDK, targeting a Tiny Tapeout shuttle. Xschem, Ngspice and Magic.</p>
+          <p class="h-tags">GF180MCU · Analog · Xschem · Magic</p>
+          <a class="h-more" href="project-cascode-amp.html">read more →</a>
+        </article>
+        <article class="h-chapter" data-i="4">
+          <div class="h-chapter-media"><img src="images/research-iv.png" alt="Measured and modeled GaN HEMT output characteristics, drain current against drain voltage for a sweep of gate voltages"></div>
+          <span class="h-status">Research · CSSTC 2026 · first author</span>
+          <h3><a href="research.html">A GaN HEMT compact model that holds at 500&nbsp;°C</a></h3>
+          <p>Commercial GaN compact models are calibrated to about 185&nbsp;°C. Wildfire sensing, downhole drilling and planetary probes need transistors working at 200 to 500&nbsp;°C. This work extends the industry-standard MVSG model into that range and validates it against measured devices from 22&nbsp;°C to 500&nbsp;°C.</p>
+          <p class="h-tags">Verilog-A · MVSG · Keysight IC-CAP · Wafer probing</p>
+          <a class="h-more" href="research.html">read more →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= SKILLS ============================= -->
+  <section class="h-skills">
+    <span class="h-kicker" data-reveal>What I work with</span>
+    <div class="h-skill-cols">
+      <div data-reveal>
+        <h4>Power electronics</h4>
+        <ul><li>HEMT</li><li>High voltage transistors</li><li>Buck/Boost topologies</li><li>100V/ns+ circuit</li><li>Dynamic R<sub>DS(on)</sub> thermal</li><li>Slew-rate control</li><li>Wide bandgap EMI &amp; parasitics</li></ul>
+      </div>
+      <div data-reveal style="--d:80ms">
+        <h4>Firmware &amp; embedded</h4>
+        <ul><li>C / C++</li><li>Assembly</li><li>VHDL</li><li>Python</li><li>IIC, UART, SPI, CAN</li></ul>
+      </div>
+      <div data-reveal style="--d:160ms">
+        <h4>Design &amp; simulation</h4>
+        <ul><li>KiCad</li><li>Altium</li><li>SPICE / PSPICE</li><li>PLECS</li><li>Keysight IC-CAP</li><li>TCAD</li><li>Verilog-A</li><li>MATLAB</li><li>Python</li></ul>
+      </div>
+      <div data-reveal style="--d:240ms">
+        <h4>Lab &amp; characterization</h4>
+        <ul><li>900V+ supplies</li><li>8 kW converters</li><li>Wafer-level probing</li><li>STEM</li><li>Differential/passive probes</li><li>Board bring-up</li><li>High-res oscilloscope</li><li>Semiconductor analyzer</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= NOW ============================= -->
+  <section class="h-now">
+    <span class="h-kicker" data-reveal>Currently</span>
+    <dl>
+      <div data-reveal><dt>Role</dt><dd>Product Applications Engineering Intern</dd></div>
+      <div data-reveal><dt>Org</dt><dd>Infineon Technologies</dd></div>
+      <div data-reveal><dt>Working on</dt><dd>650V GaN Bidirectional Transistors/Integrated</dd></div>
+      <div data-reveal><dt>Also building</dt><dd>5000 mAh USB-C PD pack</dd></div>
+      <div data-reveal><dt>Studying</dt><dd>B.Eng Elec Eng Co-op, Waterloo</dd></div>
+      <div data-reveal><dt>Open to</dt><dd>Any hardware/semiconductor related fields!</dd></div>
+    </dl>
+  </section>
+
+  <!-- ============================= CONTACT ============================= -->
+  <section class="h-contact">
+    <p data-reveal>But if you are just curious then feel free to take a walk around...</p>
+    <a class="h-big" href="contact.html" data-reveal style="--d:80ms">Shoot me a message →</a>
+    <div class="h-links" data-reveal style="--d:160ms">
+      <a href="projects.html">I'm fine, let me checkout the projects</a>
+      <a href="about.html">More about me</a>
+      <a href="resume.pdf" target="_blank" rel="noopener">resume ↗</a>
     </div>
   </section>
 
@@ -230,25 +190,7 @@
   </div>
 </footer>
 
-<script src="scroll.js" defer></script>
-<script src="spin3d.js" defer></script>
 <script src="zvs-anim.js" defer></script>
-<script>
-/* hero: swap the static render for a 3D model that spins like a display once the page has loaded */
-window.addEventListener('load', function () {
-  var fig = document.querySelector('.hero-3d'), img = fig.querySelector('img');
-  import('./model-viewer.min.js').then(function () {
-    var mv = document.createElement('model-viewer');
-    [['src','images/battery-pcb.glb'],
-     ['camera-orbit','-25deg 60deg 85%'],['interaction-prompt','none'],['environment-image','neutral'],
-     ['exposure','1.1'],['shadow-intensity','0.6'],['auto-rotate',''],['auto-rotate-delay','0'],
-     ['rotation-per-second','25deg'],['alt','3D model of the battery pack PCB']
-    ].forEach(function (x) { mv.setAttribute(x[0], x[1]); });
-    mv.addEventListener('load', function () { img.style.visibility = 'hidden'; mv.style.opacity = 1; });
-    fig.appendChild(mv);
-  });
-});
-</script>
-
+<script src="home.js" defer></script>
 </body>
 </html>
