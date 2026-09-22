@@ -5,17 +5,17 @@
 
 body.home {
   background-image: none;
-  font-family: "Inter", var(--sans);
+  font-family: var(--sans);
 }
 body.home::before { display: none; }
 body.home main { overflow-x: clip; }
 
 .home .h-kicker {
   display: inline-block;
-  font-family: "JetBrains Mono", var(--mono);
-  font-size: 0.75rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   color: var(--accent);
 }
 
@@ -72,7 +72,7 @@ body.home main { overflow-x: clip; }
   font-size: clamp(2.3rem, 5.4vw, 4.6rem);
   line-height: 1.02;
   letter-spacing: -0.035em;
-  font-weight: 700;
+  font-weight: 600;
   margin: 18px 0 22px;
 }
 .h-hero-text .hl { color: var(--fg-muted); }
@@ -83,8 +83,8 @@ body.home main { overflow-x: clip; }
 .h-scroll {
   position: absolute; left: 50%; bottom: 4vh; transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 10px;
-  font-family: "JetBrains Mono", var(--mono); font-size: 0.7rem; letter-spacing: .2em;
-  color: var(--fg-dim); text-decoration: none; text-transform: uppercase;
+  font-family: var(--sans); font-size: 0.8rem; letter-spacing: 0;
+  color: var(--fg-dim); text-decoration: none;
 }
 .h-scroll.in { transform: translateX(-50%); }
 .h-scroll i { width: 1px; height: 44px; background: linear-gradient(var(--fg-dim), transparent); animation: drip 2.2s ease-in-out infinite; transform-origin: top; }
@@ -104,13 +104,13 @@ body.home main { overflow-x: clip; }
   align-items: baseline;
 }
 .h-row:last-child { border-bottom: 1px solid var(--line); }
-.h-row .k { font-family: "JetBrains Mono", var(--mono); font-size: 0.8rem; color: var(--fg-dim); }
+.h-row .k { font-family: var(--sans); font-size: 0.8rem; color: var(--fg-dim); }
 .h-row .v { font-size: clamp(1.4rem, 3vw, 2.4rem); line-height: 1.15; letter-spacing: -0.02em; font-weight: 600; }
 
 /* ---------- work: pinned stage + scrolling chapters ---------- */
 .h-work { max-width: 1240px; margin: 0 auto; padding: 10vh 24px 0; }
 .h-work-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 4vh; }
-.h-all { font-family: "JetBrains Mono", var(--mono); font-size: 0.8rem; color: var(--fg-muted); text-decoration: none; }
+.h-all { font-family: var(--sans); font-size: 0.8rem; color: var(--fg-muted); text-decoration: none; }
 .h-all:hover { color: var(--accent); }
 
 .h-work-body { display: grid; grid-template-columns: 1.15fr 1fr; gap: 6vw; }
@@ -144,12 +144,12 @@ body.home main { overflow-x: clip; }
 .bode-mag, .bode-ph { fill: none; stroke-width: 3; stroke-linecap: round; stroke-dasharray: 1; stroke-dashoffset: var(--draw, 1); }
 .bode-mag { stroke: var(--accent); }
 .bode-ph { stroke: var(--accent-alt); stroke-dasharray: 1; opacity: .8; }
-.h-slide-bode text { font-family: "JetBrains Mono", var(--mono); font-size: 11px; fill: var(--fg-dim); }
+.h-slide-bode text { font-family: var(--sans); font-size: 11px; fill: var(--fg-dim); }
 
 .h-stage-meta {
   position: absolute; left: 0; right: 0; bottom: -34px;
   display: flex; align-items: center; gap: 14px;
-  font-family: "JetBrains Mono", var(--mono); font-size: 0.75rem; color: var(--fg-dim);
+  font-family: var(--sans); font-size: 0.75rem; color: var(--fg-dim);
 }
 .h-count { color: var(--fg); }
 .h-bar { flex: 1; height: 1px; background: var(--line); position: relative; }
@@ -163,13 +163,13 @@ body.home main { overflow-x: clip; }
 }
 .h-chapter.on { opacity: 1; }
 .h-chapter-media { display: none; }
-.h-status { font-family: "JetBrains Mono", var(--mono); font-size: 0.75rem; color: var(--fg-dim); letter-spacing: .06em; }
+.h-status { font-family: var(--sans); font-size: 0.85rem; color: var(--fg-dim); }
 .h-chapter h3 { font-size: clamp(1.7rem, 2.8vw, 2.6rem); line-height: 1.08; letter-spacing: -0.025em; margin: 14px 0 20px; }
 .h-chapter h3 a { color: var(--fg); text-decoration: none; }
 .h-chapter h3 a:hover { color: var(--accent); }
 .h-chapter p { color: var(--fg-muted); font-size: 1.05rem; line-height: 1.7; margin: 0 0 16px; }
-.h-chapter .h-tags { font-family: "JetBrains Mono", var(--mono); font-size: 0.8rem; color: var(--fg-dim); }
-.h-more { font-family: "JetBrains Mono", var(--mono); font-size: 0.85rem; color: var(--accent); text-decoration: none; margin-top: 8px; }
+.h-chapter .h-tags { font-family: var(--sans); font-size: 0.8rem; color: var(--fg-dim); }
+.h-more { font-family: var(--sans); font-size: 0.85rem; color: var(--accent); text-decoration: none; margin-top: 8px; }
 
 .h-slide-iv .iv {
   position: relative; width: 94%; border-radius: 6px; overflow: hidden;
@@ -185,7 +185,7 @@ body.home main { overflow-x: clip; }
 .iv-cursor {
   position: absolute; top: 5.2%; height: 75%; width: 2px; margin-left: -1px;
   left: calc(20.9% + 73.5% * var(--sweep, 0));
-  background: #35e0a1; box-shadow: 0 0 12px rgba(53,224,161,.8);
+  background: var(--accent); box-shadow: 0 0 12px rgba(53,224,161,.8);
   opacity: calc(1 - var(--done, 0));
   transition: opacity .4s;
 }
@@ -200,7 +200,7 @@ body.home main { overflow-x: clip; }
 /* ---------- now ---------- */
 .h-now dl { margin: 40px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 40px; }
 .h-now dl > div { padding: 22px 0; border-top: 1px solid var(--line); }
-.h-now dt { font-family: "JetBrains Mono", var(--mono); font-size: 0.75rem; color: var(--fg-dim); margin-bottom: 6px; }
+.h-now dt { font-family: var(--sans); font-size: 0.75rem; color: var(--fg-dim); margin-bottom: 6px; }
 .h-now dd { margin: 0; font-size: 1.1rem; }
 
 /* ---------- contact ---------- */
@@ -208,7 +208,7 @@ body.home main { overflow-x: clip; }
 .h-contact p { color: var(--fg-muted); font-size: 1.1rem; margin: 0 0 18px; }
 .h-big {
   display: inline-block;
-  font-size: clamp(2.4rem, 7vw, 6rem); line-height: 1; letter-spacing: -0.04em; font-weight: 700;
+  font-size: clamp(2.4rem, 7vw, 6rem); line-height: 1; letter-spacing: -0.04em; font-weight: 600;
   color: var(--fg); text-decoration: none;
   background: linear-gradient(var(--accent), var(--accent)) left bottom / 0% 3px no-repeat;
   transition: background-size .5s cubic-bezier(.16,.84,.28,1), color .3s;
@@ -216,7 +216,7 @@ body.home main { overflow-x: clip; }
 }
 .h-big:hover { background-size: 100% 3px; color: var(--accent); }
 .h-links { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 36px; }
-.h-links a { font-family: "JetBrains Mono", var(--mono); font-size: 0.85rem; color: var(--fg-muted); text-decoration: none; }
+.h-links a { font-family: var(--sans); font-size: 0.85rem; color: var(--fg-muted); text-decoration: none; }
 .h-links a:hover { color: var(--accent); }
 
 /* ---------- contact page ---------- */
@@ -228,7 +228,7 @@ body.home main { overflow-x: clip; }
   display: grid; grid-template-columns: 160px 1fr; align-items: baseline; gap: 24px;
   padding: 26px 0; text-decoration: none; color: var(--fg);
 }
-.c-k { font-family: "JetBrains Mono", var(--mono); font-size: 0.8rem; color: var(--fg-dim); }
+.c-k { font-family: var(--sans); font-size: 0.8rem; color: var(--fg-dim); }
 .c-v { font-size: clamp(1.6rem, 4.4vw, 3.4rem); line-height: 1.05; letter-spacing: -0.03em; font-weight: 600; transition: color .3s, transform .5s cubic-bezier(.16,.84,.28,1); }
 .c-list a:hover .c-v { color: var(--accent); transform: translateX(10px); }
 
