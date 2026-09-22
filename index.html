@@ -92,7 +92,7 @@
       </article>
 
       <article class="card">
-        <div class="card-media"><img src="images/gan-board-front.jpg" alt="900 V GaN BDS control daughter card"></div>
+        <div class="card-media card-scope"><canvas class="zvs-anim" aria-label="Animated AC ZVS waveform: PWM, V_DS and I_D"></canvas></div>
         <div class="card-top">
           <span class="status">Completed, Tested, Pushed internally</span>
           <span>2026</span>
@@ -110,7 +110,7 @@
       </article>
 
       <article class="card">
-        <div class="card-media"><img src="images/mmwave-v11-antenna.jpg" alt="mmWave sensor module PCB layout showing antenna keep-out"></div>
+        <div class="card-media"><img src="images/mmwave-3d-iso.png" data-glb="images/mmwave-pcb.glb" data-orbit="-25deg 58deg 95%" alt="3D render of the mmWave sensor module PCB"></div>
         <div class="card-top">
           <span class="status">v1.1 built</span>
           <span>2026</span>
@@ -130,7 +130,7 @@
       </article>
 
       <article class="card">
-        <div class="card-media"><img src="images/battery-3d-iso.png" alt="3D render of the battery pack PCB"></div>
+        <div class="card-media"><img src="images/battery-3d-iso.png" data-glb="images/battery-pcb.glb" alt="3D render of the battery pack PCB"></div>
         <div class="card-top">
           <span class="status wip">In progress</span>
           <span>2026</span>
@@ -231,6 +231,8 @@
 </footer>
 
 <script src="scroll.js" defer></script>
+<script src="spin3d.js" defer></script>
+<script src="zvs-anim.js" defer></script>
 <script>
 /* hero: swap the static render for a 3D model that spins like a display once the page has loaded */
 window.addEventListener('load', function () {

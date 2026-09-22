@@ -73,7 +73,7 @@
 
       <!-- ---------- GaN ZVS platform ---------- -->
       <article class="card" data-tags="power firmware pcb">
-        <div class="card-media"><img src="images/gan-board-front.jpg" alt="900 V GaN BDS control daughter card, front"></div>
+        <div class="card-media card-scope"><canvas class="zvs-anim" aria-label="Animated AC ZVS waveform: PWM, V_DS and I_D"></canvas></div>
         <div class="card-top"><span class="status">Complete and Deployed</span><span>2026</span></div>
         <h3><a class="stretch" href="project-gan-platform.html">Universal Characterization Platform for 900V GaN Eval Board</a></h3>
         <p>
@@ -94,7 +94,7 @@
 
       <!-- ---------- mmWave sensor ---------- -->
       <article class="card" data-tags="pcb rf firmware">
-        <div class="card-media"><img src="images/mmwave-v11.jpg" alt="mmWave sensor module v1.1 3D render"></div>
+        <div class="card-media"><img src="images/mmwave-3d-iso.png" data-glb="images/mmwave-pcb.glb" data-orbit="-25deg 58deg 95%" alt="3D render of the mmWave sensor module PCB"></div>
         <div class="card-top"><span class="status">v1.1 built</span><span>2026</span></div>
         <h3><a class="stretch" href="project-mmwave.html">Room Watchdog — mmWave Sensor Module</a></h3>
         <p>
@@ -112,7 +112,7 @@
 
       <!-- ---------- Battery pack ---------- -->
       <article class="card" data-tags="power pcb">
-        <div class="card-media"><img src="images/battery-3d-iso.png" alt="3D render of the battery pack PCB"></div>
+        <div class="card-media"><img src="images/battery-3d-iso.png" data-glb="images/battery-pcb.glb" alt="3D render of the battery pack PCB"></div>
         <div class="card-top"><span class="status wip">In progress</span><span>2026</span></div>
         <h3><a class="stretch" href="project-battery.html">20 W USB-C PD Battery Pack</a></h3>
         <p>
@@ -147,7 +147,7 @@
 
       <!-- ---------- Injector sensor hub ---------- -->
       <article class="card" data-tags="pcb firmware">
-        <div class="card-media"><img src="images/injector-back.jpg" alt="Injector sensor hub PCB, back side"></div>
+        <div class="card-media"><img src="images/injector-3d-iso.png" data-glb="images/injector-pcb.glb" data-orbit="-25deg 58deg 88%" alt="3D render of the injector sensor hub PCB"></div>
         <div class="card-top"><span class="status archived">Complete</span><span>2025</span></div>
         <h3><a class="stretch" href="project-injector-hub.html">Design Team Involvment: Injector Sensor Hub</a></h3>
         <p>
@@ -254,6 +254,8 @@
 </script>
 
 <script src="scroll.js" defer></script>
+<script src="spin3d.js" defer></script>
+<script src="zvs-anim.js" defer></script>
 
 </body>
 </html>
